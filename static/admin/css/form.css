@@ -1,0 +1,90 @@
+.flex-container {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+.flex-container label {
+    display: inline-block;
+    padding: auto;
+    margin: 0px;
+    text-decoration: 1px solid;
+}
+
+.flex-container input{
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #33363a;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: ease-in 0.7s;
+}
+
+#searchbar {
+    padding: 10px;
+    border: 2px solid #33363a;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: ease-in 0.7s;
+}
+
+button, 
+optgroup, 
+select, 
+textarea{
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #33363a;
+    border-radius: 5px;
+    font-size: 1rem;
+    min-height: calc(1.4em + (.75rem + 2px));
+}
+
+
+#id_content {
+    min-height: calc(1.5em + (.75rem + 2px));
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.btn [type=submit] {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 100;
+    transition: ease-in-out 0.9s;
+    border: none;
+}
+
+.btn-admin{
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+    margin: 15px;
+}
+
+.btn-outline-secondary {
+    margin: 15px;
+    color: #fff;
+    background-color: #198754;
+}
+

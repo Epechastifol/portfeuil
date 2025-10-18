@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.description }}</p>
+    <img src="{{ project.image.url }}" alt="{{ project.title }}" class="img-fluid w-50 justify-content-center">
+{% endblock %}

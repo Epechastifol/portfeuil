@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} | Admin </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'admin/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/css/form.css' %}">
+
+    {% block style %} {% endblock %}
+</head>
+<body>
+
+    {% include 'admin/messages.html' %}
+    
+<div class="container-fluid"> 
+    <div class="row"> 
+        <!-- Sidebar --> 
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse"> 
+            <div class="position-sticky pt-3"> 
+                <div class="text-center mb-4"> 
+                    <h4><i class="fas fa-crown"></i> Admin Panel</h4> 
+                    <small>Bienvenue, {{ user.username }}</small> 
+                </div> 
+                 
+                <ul class="nav flex-column"> 
+                    <li class="nav-item"> 
+                        <a class="nav-link active" href="{% url 'admin:index' %}"> 
+                            <i class="fas fa-tachometer-alt"></i> Dashboard 
+                        </a> 
+                    </li> 
+                     
+                    {% for app in app_list %} 
+                    <!-- Applications -->
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="{{ app.app_url }}"> 
+                            <i class="fas fa-folder"></i> {{ app.name }} 
+                        </a> 
+                        {% if app.models %} 
+                        <ul class="nav flex-column ms-3"> 
+                            {% for model in app.models %} 
+                            <li class="nav-item"> 
+                                <a class="nav-link" href="{{ model.admin_url }}"> 
+                                    <i class="fas fa-file"></i> {{ model.name }} 
+                                </a> 
+                            </li> 
+                            {% endfor %} 
+                        </ul> 
+                        {% endif %} 
+                    </li> 
+                    {% endfor %} 
+                
+                     
+                    <!-- Liens personnalisés --> 
+                    <li class="nav-item mt-4"> 
+                        <a class="nav-link" href="{% url 'profile' %}"> 
+                            <i class="fas fa-user"></i> Profile 
+                        </a> 
+                    </li> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="{% url 'admin:custom_stats' %}"> 
+                            <i class="fas fa-arrow-trend-up"></i> Statistics 
+                        </a> 
+                    </li> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="/"> 
+                            <i class="fas fa-globe"></i> Voir le site 
+                        </a> 
+                    </li> 
+                    <li class="nav-item"> 
+                        <form method="post" action="{% url 'admin:logout' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="dropdown-item text-light">
+                                <i class="fas fa-sign-out-alt"></i> 
+                                Déconnexion
+                            </button>
+                        </form>
+                    </li> 
+                </ul> 
+            </div> 
+        </nav> 
+ 
+        <!-- Main content --> 
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"> 
+            <!-- Header --> 
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom admin-header"> 
+                <h1 class="h2"> 
+                    <i class="fas fa-tachometer-alt"></i> Tableau de Bord 
+                </h1> 
+                <div class="btn-toolbar mb-2 mb-md-1 me-2"> 
+                    <span class="text-light"> 
+                        <i class="fas fa-calendar"></i> {% now "j F Y" %} 
+                    </span> 
+                </div> 
+            </div> 
+        
+
+        {% block content %}
+        {% endblock %}
+        </main>
+    </div>
+</div>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'admin/js/custom.js' %}"></script>
+</body>
+</html>

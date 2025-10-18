@@ -1,0 +1,20 @@
+{% extends 'admin/base.html' %}
+{% load i18n static %} 
+
+{% block content %}
+<div id="content-main">
+    {% if form.error %}
+    <p class="errornote">
+        {% translate "please enter the correct username and password for a staff account. Note that both fields may be case-sensitive" %}
+    </p>
+    {% endif %}
+    <form action="{% url 'admin:login' %}" method="post" id="login-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="submit-row">
+            <label> </label> <input type="submit" value="{% translate 'log in' %}">
+        </div>
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+</div>
+{% endblock %}

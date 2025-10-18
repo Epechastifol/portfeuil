@@ -1,0 +1,41 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}{% if form.instance.pk %}Modifier l'utilisateur {% else %} Ajouter un utilisateur {% endif %} {% endblock %}
+
+{% block style %}
+{% enblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">{% if form.instance.pk %}<i class="fas fa-edit"></i> Modifier l'utilisateur{% else %}<i class="fas fa-plus"></i> Ajouter un utilisateur{% endif %}</h2>
+    <form method="post" class="card p-4">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_username" class="form-label ">Nom d'utilisateur</label>
+            {{ form.username }}
+        </div>
+        <div class="mb-3">
+            <label for="id_email" class="form-label">Email</label>
+            {{ form.email }}
+        </div>
+        <div class="mb-3">
+            <label for="id_first_name" class="form-label">Prénom</label>
+            {{ form.first_name }}
+        </div>
+        <div class="mb-3">
+            <label for="id_last_name" class="form-label">Nom</label>
+            {{ form.last_name }}
+        </div>
+        {% if not form.instance.pk %}
+        <div class="mb-3">
+            <label for="id_password" class="form-label">Mot de passe</label>
+            <input type="password" name="password" id="id_password" class="form-control" required>
+        </div>
+        {% endif %}
+        <button type="submit" class="btn btn-success w-100"><i class="fas fa-user-plus"></i> S'inscrire</button>
+    </form>
+    <div class="mt-3 text-center">
+        <a href="{% url 'admin:login' %}">Déjà un compte ? Se connecter</a>
+    </div>
+</div>
+{% endblock %}

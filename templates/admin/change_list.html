@@ -1,0 +1,40 @@
+{% extends "admin/base_site.html" %} 
+{% load i18n admin_urls static admin_list %} 
+ 
+{% block content %} 
+<div class="container">
+    <div class="card">
+        <div class="row card-body"> 
+            <div class="col"> 
+                <h2>{{ cl.opts.verbose_name_plural|capfirst }}</h2> 
+            </div> 
+            <div class="col-auto"> 
+                {% if has_add_permission %} 
+                <a href="{% url cl.opts|admin_urlname:'add' %}" class="btn btn-success mt-3"> 
+                    <i class="fas fa-plus"></i> Ajouter 
+                </a> 
+                {% endif %} 
+            </div> 
+        </div> 
+    
+        <!-- Filtres et recherche --> 
+         <div class="text-center form-recherch mb-3">
+            {% block search %}{% search_form cl %}{% endblock %} 
+        </div>
+    
+        <!-- Résultats --> 
+        <div class="card card-custom cards-customer"> 
+            <div class="card-body"> 
+                {% block result_list %} 
+                {% if action_form and actions_on_top and cl.show_admin_actions %}{% admin_actions %}{% endif %} 
+                {% result_list cl %} 
+                {% if action_form and actions_on_bottom and cl.show_admin_actions %}{% admin_actions %}{% endif %} 
+                {% endblock %} 
+            </div> 
+        </div> 
+    
+        <!-- Pagination --> 
+        {% block pagination %}{% pagination cl %}{% endblock %} 
+    </div>
+</div> 
+{% endblock %} 

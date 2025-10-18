@@ -1,0 +1,44 @@
+ 
+/* Amélioration des tables */ 
+.table thead th { 
+    background: var(--secondary-color); 
+    color: white; 
+    border: none; 
+} 
+ 
+.table tbody tr:hover { 
+    background-color: rgba(52, 152, 219, 0.1); 
+} 
+ 
+/* Formulaires */ 
+.form-control:focus { 
+    border-color: var(--primary-color); 
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25); 
+} 
+ 
+/* Badges */ 
+.badge { 
+    font-size: 0.75em; 
+} 
+ 
+/* Navigation */ 
+.sidebar-nav .nav-link { 
+    border-radius: 5px; 
+    margin: 2px 0; 
+} 
+ 
+.sidebar-nav .nav-link.active { 
+    background: var(--primary-color); 
+} 
+ 
+/* Responsive */ 
+@media (max-width: 768px) { 
+    .admin-sidebar { 
+        width: 70px; 
+    } 
+     
+    .admin-sidebar .sidebar-header span, 
+    .admin-sidebar .nav-link span { 
+        display: none; 
+    } 
+}

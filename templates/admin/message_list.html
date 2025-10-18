@@ -1,0 +1,44 @@
+{% extends 'base_site.html' %}
+
+{% block content %}
+<!-- Derniers messages --> 
+            <div class="row mt-4"> 
+                <div class="col-12"> 
+                    <div class="card"> 
+                        <div class="card-header bg-warning text-dark"> 
+                            <h5 class="mb-0"> 
+                                <i class="fas fa-clock"></i> Tous les messages 
+                            </h5> 
+                        </div> 
+                        <div class="card-body"> 
+                            {% if all_messages %} 
+                            <div class="table-responsive"> 
+                                <table class="table table-striped"> 
+                                    <thead> 
+                                        <tr class="text-center"> 
+                                            <th>Nom</th> 
+                                            <th>Email</th> 
+                                            <th>Sujet</th> 
+                                            <th>Date</th> 
+                                        </tr> 
+                                    </thead> 
+                                    <tbody> 
+                                        {% for messasge in all_messages %} 
+                                        <tr class="text-center"> 
+                                            <td><a href="#" class="text-decoration-none">{{ message.name }}</a></td> 
+                                            <td>{{ message.email }}</td> 
+                                            <td>{{ message.subject|truncatewords:5 }}</td> 
+                                            <td>{{ message.created_at|date:"H:i d/m/Y" }}</td> 
+                                        </tr> 
+                                        {% endfor %} 
+                                    </tbody> 
+                                </table> 
+                            </div> 
+                            {% else %} 
+                            <p class="text-muted">Aucun message récent.</p> 
+                            {% endif %} 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+{% endblock %}

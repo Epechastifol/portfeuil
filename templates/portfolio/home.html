@@ -1,0 +1,418 @@
+{% extends 'base.html' %}
+{% block title %}Accueil{% endblock %}
+{% load static %}
+{% block content %}
+<canvas></canvas>
+ <!-- Messages d'alerte --> 
+    {% if messages %} 
+        {% for message in messages %} 
+            <div class="alert alert-{{ message.tags }} alert-dismissible text-center fade show" role="alert"> 
+                {{ message }} 
+                <button type="button" class="btn-close text-center" data-bs-dismiss="alert"></button> 
+            </div> 
+        {% endfor %} 
+    {% endif %} 
+
+    <!-- Section Présentation (Hero) -->
+<header id="hero" class="container-fluid text-white text-center d-flex align-items-center justify-content-center min-vh-100" style="background: url('https://via.placeholder.com/1920x1080.png?text=Hero+Background') no-repeat center center/cover;">
+   
+    <div class="overlay">
+    </div>
+    <div class="container position-relative text-dark">
+        
+
+        <h1>IGNAGALI ZIAKRABA KAZILKI</h1>
+        <p class="lead">Formateur certifié Microsoft</p>
+        <a href="#projects" class="btn btn-success btn-lg mt-3">Voir mes Certifications</a>
+    </div>
+</header>
+    <!-- Section À Propos -->
+<section id="about" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">À Propos de Moi</h2>
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="{% static 'images/profil.jpg' %}" alt="Votre Photo" class="img-fluid rounded mb-3">
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Formateur certifié Microsoft, j’accompagne depuis 5+ ans ONG, étudiants et professionnels à transformer leurs données en décisions stratégiques.</p>
+                <p class="lead">Spécialiste de la formation digitale, j'accompagne les équipes dans le renforcement des compétences en Excel, PowerBI, KobotoolBox et VBA, et dans la mise en place de process efficaces pour transformer les données en décisions stratégiques.</p>
+                <a href="{% static 'documents/cv.pdf' %}" class="btn btn-outline-success me-2"><i class="fas fa-download me-2"></i>Télécharger mon CV</a>
+                <a href="#contact" class="btn btn-outline-success"><i class="fas fa-envelope me-2"></i>Me Contacter</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Section Certifications -->
+    <section id="certificats" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes Certifications</h2>
+            
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="static/images/microspbID.jpeg" alt="Certificat de reuissite de Harnessing the powerBI">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/microspbID.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Harnessing the Power of Data with Power BI</h3>
+                        <div class="project-tech">
+                            <span>14 Septembre 2024</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Projet 2 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="static/images/cursacertif.jpeg" alt="Certificat Cursa">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/cursacertif.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Formation complete PowerBI avec ResportingSavvy</h3>
+                        <div class="project-tech">
+                            <span>18 Août 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="static/images/Linkidvalid.jpeg" alt="Certificat LinkedIn Learning">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/Linkidvalid.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Excel: Validation des données (Microsoft 365)</h3>
+                        <div class="project-tech">
+                            <span>07 Août 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="static/images/formulLinkin.jpeg" alt="Certificat LinkedIn Learning">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/formulLinkin.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Excel: Formulaire et Fonction avancées (Microsoft 365)</h3>
+                        <div class="project-tech">
+                            <span>21 Août 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="static/images/certreuissite.jpeg" alt="Certificat de reuissite">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/certreuissite.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Réalisez un diaporama pour accompagner votre présentation</h3>
+                        <div class="project-tech">
+                            <span>01 Février 2021</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ajoutez d'autres projets ici -->
+            </div>
+        </div>
+    </section>
+
+    <section id="trophe" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes Badges & Trophés</h2>
+            <div class="projects-grid">
+                <!-- Projet 2 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="static/images/sementPB.jpeg" alt="Certificat de conception de modele Sémentique">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/sementPB.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Conception de modele sémentique</h3>
+                        <div class="project-tech">
+                            <span>03 décembre 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet 3 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="static/images/transPB.jpeg" alt="Nom du projet">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/transPB.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Netoyage, transformer et charger les données</h3>
+                        <div class="project-tech">
+                            <span>03 décembre 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 4 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="static/images/obteniPB.jpeg" alt="Certificat d'obtention de données dans powerBI">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/obteniPB.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Obtenir les données dans PowerBI</h3>
+                        <div class="project-tech">
+                            <span>3 décembre 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 4 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="static/images/evaluationPB.jpeg" alt="Certificat de creation des évaluations dynamique avec forms">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/evaluationPB.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Créer des Evaluation dynamique avec Forms</h3>
+                        <div class="project-tech">
+                            <span>24 juillet 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="static/images/shartPB.jpeg" alt="Certificat de creation et partage de rapport avec PowerBI">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="static/images/shartPB.jpeg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Créer et partager son premier rapport Power BI</h3>
+                        <div class="project-tech">
+                            <span>03 décembre 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Section Compétences -->
+<section id="compet" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Mes Compétences</h2>
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <i class="fas fa-file-excel fa-4x text-success mb-3"></i>
+                <h3>Excel</h3>
+                <p class="text-muted">Analyse de données et automatisation</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="{% static 'images/pwbi96.png' %}" alt="powerBI">
+                <h3>PowerBI</h3>
+                <p class="text-muted">Visualisation et tableaux de bord</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="{% static 'images/kobo.png' %}" width="300" height="95" alt="">
+                <h3>KobotoolBox</h3>
+                <p class="text-muted">Collecte et gestion de données de terrain</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <i class="fas fa-code fa-4x text-secondary mb-3"></i>
+                <h3>VBA</h3>
+                <p class="text-muted">Automatisation des processus dans Microsoft Office</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Formation academique et langues -->
+    <section id="skiills" class="skiills mb-5">
+        <div class="container">
+            <div class="skiills-grid">
+                <!-- Langues -->
+                <div class="skiill-category">
+                    <h3><i class="fa fa-language"></i> LANGUES</h3>
+                    <div class="skiill-tags">
+                        <span class="skiill-tag bg-success">Français: Courant (langue de travail)</span>
+                        <span class="skiill-tag bg-success">Anglais: Techniques (lecture documentation)</span>
+                        <span class="skiill-tag bg-success">Arabe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expérience -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Mon Expérience Proffessionnelle</h2>
+            <div class="timeline">
+                <!-- Expérience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date text-success">2019 - Présent</div>
+                    <div class="timeline-content">
+                        <h3>FORMATEUR PRINCIPAL</h3>
+                        <h4 class="text-success">POWER TIC</h4>
+                        <p></p>
+                        <ul>
+                            <li>200+ professionnels formés sur Excel, Power BI et outils digitaux.</li>
+                            <li>Supports pédagogiques adaptés au terrain.</li>
+                            <li>Evaluation des apprentissages </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Expérience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-date text-success">2023 - Présent</div>
+                    <div class="timeline-content">
+                        <h3>CONSULTANT - FORMATEUR</h3>
+                        <h4 class="text-success">KATOOTECH GROUP SARL</h4>
+                        <ul>
+                            <li>Animation de formation en Microsoft Office 365 (Excel, Word, Power Point) et Power BI </li>
+                            <li>Evaluation des apprentissages</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Expérience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-date text-success">Février - 2025</div>
+                    <div class="timeline-content">
+                        <h3>FORMATEUR PRINCIPAL</h3>
+                        <h4 class="text-success"> CABINET CERFORMAD</h4>
+                        <p>
+                           Animation de formations en Kobotoolbox, Excel, Power BI, SPSS.
+                        </p>
+                    </div>
+                </div>
+                <!-- Expérience 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-date text-success">2021 - 2023 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>FORMATEUR CONSULTANT</h3>
+                        <h4 class="text-success">INTERNATIONAL RESCUE COMMITTEE (IRC) </h4>
+                        <p>Lieu : <span>Bol, Hadjerhadjid, Mongo – Tchad </span></p>
+                        <ul>
+                            <li>Formé le staff IRC aux outils de gestion de données terrain. </li>
+                            <li>Accompagné la mise en place de systèmes de suivi-évaluation digitalisés.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Expérience 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-date text-success">2020 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>CONSULTANT EN DIGITALISATION</h3>
+                        <h4 class="text-success">CABINETS LOCAUX</h4>
+                        <p>
+                            Pays: <span>Tchad</span>
+                        </p>
+                        <ul>
+                            <li>Réalisé des audits digitaux et formé aux outils collaboratifs (Teams, Google Workspace). </li>
+                            <li>Accompagné la mise en place de solutions cloud sécurisées.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Contactez-moi</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Travaillons ensemble !</h3>
+                    <p>
+                        Je suis toujours ouvert à discuter de nouveaux projets 
+                        et opportunités de collaboration.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope text-success"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p> ignagali.zk@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone text-success"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+235 60 88 71 18</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt text-success"></i>
+                            <div>
+                                <h4>Localisation</h4>
+                                <p>N'djaména, Tchad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" method="post" action="{% url 'contact' %}">
+                    {% csrf_token %} 
+                    <div class="form-group">
+                        {{ form }}
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-paper-plane"></i>
+                        Envoyer le message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
