@@ -28,18 +28,16 @@ class CustomAdminSite(admin.AdminSite):
     def index(self, request, extra_context=None): 
         # Statistiques pour le dashboard 
         extra_context = extra_context or {} 
-         
+        
         # Récupération des données 
-        total_projets = Project.objects.count()
         total_article = Articles.objects.count()
         total_messages = ContactMessage.objects.count() 
-        unread_messages = ContactMessage.objects.count()  # Ajoutez un champ "lu" si besoin 
+        unread_messages = ContactMessage.objects.all() # Ajoutez un champ "lu" si besoin 
 
          
         extra_context.update({ 
             'total_messages': total_messages, 
-            'unread_messages': unread_messages, 
-            'total_projects': total_projets,   
+            'unread_messages': unread_messages.count(),  
             'total_articles': total_article,  
             'recent_contacts': ContactMessage.objects.all().order_by('-created_at')[:5], 
             'recent_articles': Articles.objects.all().order_by('-created_at')[:5], 

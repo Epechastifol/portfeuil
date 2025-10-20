@@ -1,14 +1,10 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from .models import Project, ContactMessage
+from django.shortcuts import render, redirect
+from .models import ContactMessage
 from .forms import ContactForm
-from django.contrib.messages.views import SuccessMessageMixin
-from django.urls import reverse_lazy
-from django.views.generic import DeleteView, DetailView
+from django.views.generic import DetailView
 from django.contrib import messages 
 
 def Home(request):
-    projects = Project.objects.all().order_by('-date_completed')
-
     if request.method == 'POST': 
         form = ContactForm(request.POST) 
         if form.is_valid(): 
@@ -21,15 +17,9 @@ def Home(request):
         form = ContactForm() 
 
     context = {
-        'projects': projects,
         'form': form,
     }
     return render(request, 'portfolio/home.html', context)
-
-
-def project_detail(request, slug):
-    project = get_object_or_404(Project, slug= slug)
-    return render(request, 'portfolio/project_detail.html', {'project': project})
 
 
 def Contact_View(request): 

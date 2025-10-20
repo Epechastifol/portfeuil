@@ -68,13 +68,6 @@
                                     </form>
                                 </li>
                             </ul>
-                        </li>
-                    {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'admin:login' %}">
-                                <i class="fas fa-sign-in-alt"></i> Connexion
-                            </a>
-                        </li>
                     {% endif %}
                 </ul>
             </div>
@@ -88,7 +81,7 @@
             <div class="mb-2">
                 <i class="fa-solid fa-user-gear me-2"></i>IGNAGALI ZIAKRABA - Portfolio            </div>
             <div>
-                &copy; {{ now|date:'Y' }} Tous droits réservés. Réalisé par FerbyTech.
+                &copy; {% now 'Y' %} Tous droits réservés. Réalisé par <a href="#" class="text-decoration-none text-light"><strong>FerbyTech</strong></a>.
             </div>
             <div class="mt-2">
                 <p>Tu peux aussi me trouver sur :</p>

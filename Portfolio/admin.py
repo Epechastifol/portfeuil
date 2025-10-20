@@ -1,11 +1,7 @@
-from datetime import timezone
+
 from django.contrib import admin
 from Core.admin import admin_site
-from django.template.response import TemplateResponse 
-from django.urls import path 
-from Core.admin import CustomAdminSite
-from django.db.models import Count 
-from .models import Project, Tag, ContactMessage
+from .models import ContactMessage
 
  
 class ContactMessageAdmin(admin.ModelAdmin): 
@@ -27,13 +23,4 @@ class ContactMessageAdmin(admin.ModelAdmin):
     mark_as_read.short_description = "Marquer comme lu"
 
 
-admin_site.register(ContactMessage, ContactMessageAdmin) 
-
-
-# Enregistrez vos modèles
-class ProjetAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'image', 'url',  'slug', 'date_completed')
-
-admin_site.register(Project, ProjetAdmin)
-admin_site.register(Tag)
-
+admin_site.register(ContactMessage, ContactMessageAdmin)

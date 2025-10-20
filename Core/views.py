@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.edit import UpdateView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -27,5 +27,5 @@ class UserUpdateView(SuccessMessageMixin, UpdateView):
     model = User
     fields = ['username', 'email', 'first_name', 'last_name', 'password']
     template_name = 'admin/actions/user_form.html'
-    success_url = reverse_lazy('admin:profile')
+    success_url = reverse_lazy('admin:index')
     success_message = "Vos informtions ont été modifiées avec succes."
