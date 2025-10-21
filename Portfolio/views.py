@@ -41,3 +41,13 @@ class MessageDetailView(DetailView):
 	model = ContactMessage
 	template_name = 'admin/actions/detailsMessage.html'
 	context_object_name = 'message'
+
+
+def Audit(request):
+    return render(request, 'portfolio/audit.html')
+
+def Evaluation(request):
+    return render(request, 'portfolio/evaluation.html')
+
+def Services(request):
+    return render(request, 'portfolio/services.html')

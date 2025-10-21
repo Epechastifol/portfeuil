@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Audit & Evaluation {% endblock %}
+
+{% block style %}   
+<link rel="stylesheet" href="{% static 'css/home/services.css' %}">
+{% endblock %}
+
+{% block content %}
+<canvas></canvas>
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">🎓 Formations Excel & Power BI</h1>
+        <p class="lead mb-5">Des fondamentaux à l'expertise avancée pour transformer vos données en décisions stratégiques</p>
+        <a href="#excel" class="btn btn-light btn-lg px-5 me-3">Découvrir Excel</a>
+        <a href="#powerbi" class="btn btn-outline-light btn-lg px-5">Découvrir Power BI</a>
+    </div>
+</section>
+
+<!-- Formations Excel -->
+<section id="excel" class="py-5">
+    <div class="container">
+        <h2 class="section-title">Excel - Parcours Progressifs</h2>
+        <p class="lead mb-5">Un programme de formation structuré pour maîtriser Excel à tous les niveaux</p>
+        
+        <div class="row g-4">
+            <!-- Niveau 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="icon-container">
+                            <i class="fas fa-chart-bar fa-2x"></i>
+                        </div>
+                        <h4>Niveau 1 : Fondamentaux</h4>
+                    </div>
+                    <div class="service-body">
+                        <span class="level-badge level-1">Débutant</span>
+                        <p>Acquérez les bases essentielles pour utiliser Excel efficacement au quotidien.</p>
+                        <ul class="feature-list">
+                            <li>Maîtriser l'interface et la navigation</li>
+                            <li>Formules essentielles (SOMME, MOYENNE, etc.)</li>
+                            <li>Mise en forme conditionnelle</li>
+                            <li>Gestion des classeurs et feuilles</li>
+                            <li>Création de graphiques basiques</li>
+                            <li>Tri et filtrage des données</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-custom">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Niveau 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="icon-container">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                        <h4>Niveau 2 : Intermédiaire</h4>
+                    </div>
+                    <div class="service-body">
+                        <span class="level-badge level-2">Intermédiaire</span>
+                        <p>Approfondissez vos compétences pour analyser et visualiser vos données efficacement.</p>
+                        <ul class="feature-list">
+                            <li>Tableaux croisés dynamiques</li>
+                            <li>Fonctions RECHERCHEV et INDEX/EQUIV</li>
+                            <li>SI imbriquées et fonctions logiques</li>
+                            <li>Introduction à Power Query</li>
+                            <li>Validation des données</li>
+                            <li>Graphiques avancés</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-custom">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Niveau 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="icon-container">
+                            <i class="fas fa-rocket fa-2x"></i>
+                        </div>
+                        <h4>Niveau 3 : Expert</h4>
+                    </div>
+                    <div class="service-body">
+                        <span class="level-badge level-3">Expert</span>
+                        <p>Devenez un expert Excel capable d'automatiser et d'optimiser vos processus.</p>
+                        <ul class="feature-list">
+                            <li>Macros VBA et automatisation</li>
+                            <li>Modélisation avancée</li>
+                            <li>Dashboard interactifs</li>
+                            <li>Power Pivot et modélisation de données</li>
+                            <li>Fonctions avancées (matricielles, etc.)</li>
+                            <li>Optimisation des performances</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-custom">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Formations Power BI -->
+<section id="powerbi" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Power BI - De la Data à la Décision</h2>
+        <p class="lead mb-5">Transformez vos données en insights actionnables avec Power BI</p>
+        
+        <div class="row g-4">
+            <!-- Initiation -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="icon-container">
+                            <i class="fas fa-chart-pie fa-2x"></i>
+                        </div>
+                        <h4>Initiation Power BI</h4>
+                    </div>
+                    <div class="service-body">
+                        <span class="level-badge level-1">Débutant</span>
+                        <p>Prenez en main Power BI et créez vos premiers rapports visuels.</p>
+                        <ul class="feature-list">
+                            <li>Premiers pas avec l'interface Power BI</li>
+                            <li>Connexion aux sources de données</li>
+                            <li>Visualisations basiques (graphiques, tableaux)</li>
+                            <li>Création de pages de rapport</li>
+                            <li>Filtres et interactions de base</li>
+                            <li>Partage des rapports</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-custom">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Intermédiaire -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="icon-container">
+                            <i class="fas fa-bullseye fa-2x"></i>
+                        </div>
+                        <h4>Intermédiaire Power BI</h4>
+                    </div>
+                    <div class="service-body">
+                        <span class="level-badge level-2">Intermédiaire</span>
+                        <p>Approfondissez vos compétences pour créer des rapports avancés et performants.</p>
+                        <ul class="feature-list">
+                            <li>Modélisation DAX avancée</li>
+                            <li>Transformations Power Query complexes</li>
+                            <li>Rapports avancés et interactifs</li>
+                            <li>Création de mesures personnalisées</li>
+                            <li>Optimisation des modèles de données</li>
+                            <li>Intégration de données multiples</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-custom">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Expert -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="icon-container">
+                            <i class="fas fa-lightbulb fa-2x"></i>
+                        </div>
+                        <h4>Expert Power BI</h4>
+                    </div>
+                    <div class="service-body">
+                        <span class="level-badge level-3">Expert</span>
+                        <p>Devenez un expert Power BI capable de déployer des solutions d'entreprise.</p>
+                        <ul class="feature-list">
+                            <li>Optimisation des performances</li>
+                            <li>Déploiement en entreprise</li>
+                            <li>Bonnes pratiques avancées</li>
+                            <li>Gestion des rôles de sécurité</li>
+                            <li>Intégration avec d'autres services</li>
+                            <li>Administration des espaces de travail</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-custom">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Comparaison -->
+<section id="comparaison" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Excel vs Power BI : Quel outil choisir ?</h2>
+        <p class="lead text-center mb-5">Découvrez les forces de chaque outil pour faire le bon choix selon vos besoins</p>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="comparison-table">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th width="30%">Critères</th>
+                                <th width="35%">Excel</th>
+                                <th width="35%">Power BI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Analyse de données</td>
+                                <td><i class="fas fa-check text-success me-2"></i> Idéal pour l'analyse détaillée</td>
+                                <td><i class="fas fa-check text-success me-2"></i> Optimisé pour l'analyse visuelle</td>
+                            </tr>
+                            <tr>
+                                <td>Volume de données</td>
+                                <td><i class="fas fa-check text-success me-2"></i> Limité par la mémoire de l'ordinateur</td>
+                                <td><i class="fas fa-check text-success me-2"></i> Gestion de gros volumes avec compression</td>
+                            </tr>
+                            <tr>
+                                <td>Tableaux de bord</td>
+                                <td><i class="fas fa-times text-danger me-2"></i> Possibilités limitées</td>
+                                <td><i class="fas fa-check text-success me-2"></i> Création facile et interactive</td>
+                            </tr>
+                            <tr>
+                                <td>Partage et collaboration</td>
+                                <td><i class="fas fa-times text-danger me-2"></i> Partage de fichiers traditionnel</td>
+                                <td><i class="fas fa-check text-success me-2"></i> Service cloud intégré</td>
+                            </tr>
+                            <tr>
+                                <td>Actualisation des données</td>
+                                <td><i class="fas fa-times text-danger me-2"></i> Manuel ou avec configuration complexe</td>
+                                <td><i class="fas fa-check text-success me-2"></i> Automatique et planifiée</td>
+                            </tr>
+                            <tr>
+                                <td>Courbe d'apprentissage</td>
+                                <td><i class="fas fa-check text-success me-2"></i> Faible à modérée</td>
+                                <td><i class="fas fa-times text-danger me-2"></i> Modérée à élevée</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="highlight mt-4">
+                    <h5><i class="fas fa-lightbulb text-warning me-2"></i> Notre recommandation</h5>
+                    <p class="mb-0">Utilisez <strong>Excel</strong> pour l'analyse détaillée et la modélisation financière. Optez pour <strong>Power BI</strong> lorsque vous avez besoin de créer des tableaux de bord interactifs, de gérer de gros volumes de données ou de partager facilement des rapports dans votre organisation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section CTA -->
+<section id="contact" class="cta-section text-center">
+    <div class="container">
+        <h2 class="mb-4">Prêt à transformer vos compétences Excel & Power BI ?</h2>
+        <p class="lead mb-4">Contactez-nous pour une consultation gratuite et identifier la formation la plus adaptée à vos besoins</p>
+        <a href="#" class="btn btn-custom btn-lg px-5 me-3"><i class="fas fa-envelope me-2"></i>Demander un devis</a>
+        <a href="#" class="btn btn-outline-success btn-lg px-5"><i class="fas fa-phone me-2"></i>Nous appeler</a>
+    </div>
+</section>
+
+{% endblock %}

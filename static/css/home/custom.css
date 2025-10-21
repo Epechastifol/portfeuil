@@ -1,0 +1,66 @@
+:root {
+            --accent: #28a745;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success:#198754;
+        }
+
+.hero-section {
+    background: linear-gradient(135deg, var(--success) 0%, var(--accent) 100%);
+    color: var(--light);
+    padding: 80px 0;
+}
+.section-title {
+    border-bottom: 3px solid var(--success);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.methodology-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--dark);
+    transition: transform 0.3s;
+    height: 100%;
+}
+.methodology-card:hover {
+    transform: translateY(-5px);
+}
+.icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+.testimonial {
+    background-color: var(--light);
+    border-left: 5px solid var(--success);
+    padding: 20px;
+    margin: 30px 0;
+}
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--success);
+}
+.cta-section {
+    background-color: var(--success);
+    color: var(--light);
+    padding: 60px 0;
+}
+.btn-custom {
+    background-color: var(--success);
+    color: var(--light);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.7s;
+}
+.btn-custom:hover {
+    background-color: var(--accent);
+    color: var(--light);
+    transform: translateY(-2px);
+}

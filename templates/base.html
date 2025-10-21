@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/home/styles.css' %}">
+    {% block style %} {% endblock %}
     
 </head>
 <body>
@@ -28,13 +29,13 @@
                         <a class="nav-link" href="/">Acceuil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#certificats">Mes Certifications</a>
+                        <a class="nav-link" href="{% url 'audit' %}">Audit & Evaluation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#trophe">Trophés & Badges</a>
+                        <a class="nav-link" href="{% url 'evaluation' %}">Evaluation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#compet">Compétences</a>
+                        <a class="nav-link" href="{% url 'services' %}">Mes Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#experience">Expériences</a>

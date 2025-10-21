@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Audit & Evaluation {% endblock %}
+
+{% block style %}   
+<link rel="stylesheet" href="{% static 'css/home/Evaluation.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container position-relative">
+        <h1 class="display-4 fw-bold mb-4">🔍 Audit & Évaluation des Compétences</h1>
+        <p class="lead mb-5">Service exclusif pour ONG et Entreprises</p>
+        <a href="#methodologie" class="btn btn-light btn-lg px-5 me-3">Découvrir notre approche</a>
+        <a href="#contact" class="btn btn-outline-light btn-lg px-5">Demander un audit</a>
+    </div>
+</section>
+
+<!-- Section Constat -->
+<section id="constat" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="section-title">Le constat</h2>
+                <p class="lead mb-4">"68% des utilisateurs Excel n'exploitent que 10% de ses fonctionnalités. Identifiez les gaps pour optimiser votre budget formation."</p>
+                
+                <div class="highlight-box">
+                    <h5><i class="fas fa-exclamation-triangle text-warning me-2"></i> Conséquences de la sous-utilisation</h5>
+                    <ul class="mb-0">
+                        <li>Perte de temps sur des tâches répétitives et manuelles</li>
+                        <li>Risques d'erreurs dans les données et analyses</li>
+                        <li>Décisions basées sur des informations incomplètes</li>
+                        <li>Frustration et démotivation des collaborateurs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number">68%</div>
+                            <p class="mb-0">des utilisateurs n'exploitent qu'une fraction des capacités d'Excel</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number">10%</div>
+                            <p class="mb-0">seulement des fonctionnalités sont utilisées en moyenne</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number">5h/sem</div>
+                            <p class="mb-0">temps perdu en moyenne par collaborateur</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number">30%</div>
+                            <p class="mb-0">d'économies potentielles sur le budget formation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Méthodologie -->
+<section id="methodologie" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Ma méthodologie en 3 phases</h2>
+        <p class="lead text-center mb-5">Une approche structurée pour identifier précisément vos besoins en compétences</p>
+        
+        <!-- Process Flow -->
+        <div class="process-flow d-none d-md-block">
+            <div class="row">
+                <div class="col-md-4 process-step">
+                    <div class="step-number">1</div>
+                    <h5>Diagnostic Initial</h5>
+                </div>
+                <div class="col-md-4 process-step">
+                    <div class="step-number">2</div>
+                    <h5>Évaluation Technique</h5>
+                </div>
+                <div class="col-md-4 process-step">
+                    <div class="step-number">3</div>
+                    <h5>Rapport Stratégique</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-4 mt-4">
+            <!-- Phase 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="phase-card">
+                    <div class="phase-header">
+                        <div class="phase-icon">
+                            <i class="fas fa-search fa-2x"></i>
+                        </div>
+                        <h4>Phase 1 : Diagnostic Initial</h4>
+                    </div>
+                    <div class="phase-body">
+                        <p>Compréhension approfondie de votre environnement et de vos besoins spécifiques.</p>
+                        <ul class="feature-list">
+                            <li>Questionnaire technique adapté aux métiers</li>
+                            <li>Analyse des fichiers et processus existants</li>
+                            <li>Entretiens avec les managers et équipes</li>
+                            <li>Identification des processus clés</li>
+                            <li>Évaluation des besoins métier</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="phase-card">
+                    <div class="phase-header">
+                        <div class="phase-icon">
+                            <i class="fas fa-flask fa-2x"></i>
+                        </div>
+                        <h4>Phase 2 : Évaluation Technique</h4>
+                    </div>
+                    <div class="phase-body">
+                        <p>Mesure objective des compétences réelles sur des cas concrets de votre entreprise.</p>
+                        <ul class="feature-list">
+                            <li>Tests pratiques sur cas réels d'entreprise</li>
+                            <li>Évaluation de 20 compétences clés Excel/Power BI</li>
+                            <li>Benchmark avec les standards du marché</li>
+                            <li>Analyse des bonnes pratiques</li>
+                            <li>Identification des axes de progression</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="phase-card">
+                    <div class="phase-header">
+                        <div class="phase-icon">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                        <h4>Phase 3 : Rapport Stratégique</h4>
+                    </div>
+                    <div class="phase-body">
+                        <p>Recommandations actionnables pour optimiser votre investissement formation.</p>
+                        <ul class="feature-list">
+                            <li>Cartographie des compétences par service</li>
+                            <li>Plan de développement priorisé</li>
+                            <li>Estimation du ROI de formation</li>
+                            <li>Recommandations personnalisées</li>
+                            <li>Feuille de route de mise en œuvre</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Bénéfices -->
+<section id="benefices" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Les bénéfices de notre audit</h2>
+        <p class="lead text-center mb-5">Pourquoi investir dans un audit des compétences Excel/Power BI ?</p>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h5>Optimisation du budget formation</h5>
+                        <p class="mb-0">Ciblez précisément les compétences à développer et évitez les formations inutiles. Jusqu'à 30% d'économies sur votre budget formation.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h5>Gain de productivité</h5>
+                        <p class="mb-0">Réduisez le temps perdu sur des tâches répétitives. En moyenne, nos clients gagnent 5 à 15 heures par semaine et par collaborateur.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h5>Réduction des risques</h5>
+                        <p class="mb-0">Limitez les erreurs de manipulation de données et améliorez la fiabilité de vos analyses et rapports.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <h5>Amélioration de la collaboration</h5>
+                        <p class="mb-0">Standardisez les pratiques et facilitez le partage d'informations entre les équipes et les services.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h5>Décisions plus éclairées</h5>
+                        <p class="mb-0">Accédez à des analyses plus fines et plus rapides pour prendre des décisions stratégiques mieux informées.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div>
+                        <h5>Avantage concurrentiel</h5>
+                        <p class="mb-0">Développez un savoir-faire data qui vous différencie et améliore votre agilité face aux changements du marché.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <div class="highlight-box mx-auto" style="max-width: 800px;">
+                <h4><i class="fas fa-calculator me-2"></i> Retour sur investissement garanti</h4>
+                <p class="mb-0">Notre audit permet un retour sur investissement moyen de 3 à 6 mois grâce aux gains de productivité et à l'optimisation du budget formation. Nous incluons une estimation détaillée du ROI dans notre rapport final.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Clients -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h3 class="text-center mb-5">Ils nous font confiance</h3>
+        <div class="client-logos">
+            <div class="client-logo">ONG</div>
+            <div class="client-logo">PME</div>
+            <div class="client-logo">Grands Comptes</div>
+            <div class="client-logo">Associations</div>
+            <div class="client-logo">Institutions</div>
+        </div>
+    </div>
+</section>
+
+<!-- Section CTA -->
+<section id="contact" class="cta-section text-center">
+    <div class="container">
+        <h2 class="mb-4">Prêt à optimiser vos compétences Excel & Power BI ?</h2>
+        <p class="lead mb-4">Contactez-nous pour un audit personnalisé et identifiez le potentiel d'amélioration dans votre organisation</p>
+        <a href="#" class="btn btn-custom btn-lg px-5 me-3"><i class="fas fa-clipboard-list me-2"></i>Demander un audit</a>
+        <a href="#" class="btn btn-outline-success btn-lg px-5"><i class="fas fa-phone me-2"></i>Échanger avec un expert</a>
+    </div>
+</section>
+
+{% endblock %}
