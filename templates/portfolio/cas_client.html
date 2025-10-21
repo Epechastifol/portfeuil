@@ -1,0 +1,310 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Réalisations & Cas Client {% endblock %}
+
+{% block style %}   
+<link rel="stylesheet" href="{% static 'css/home/cas_client.css' %}">
+{% endblock %}
+
+{% block content %}
+<canvas></canvas>
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container position-relative">
+        <h1 class="display-4 fw-bold mb-4">💼 Réalisations & Cas Clients</h1>
+        <p class="lead mb-5">Des résultats concrets pour nos clients à travers des solutions Excel et Power BI sur mesure</p>
+        <a href="#cas-clients" class="btn btn-light btn-lg px-5 me-3">Découvrir nos réalisations</a>
+        <a href="#contact" class="btn btn-outline-light btn-lg px-5">Votre succès ici</a>
+    </div>
+</section>
+
+<!-- Section Impact Global -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Impact Global de Nos Interventions</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="impact-metric metric-1">
+                    <div class="metric-value">85%</div>
+                    <p class="mb-0">de gain de temps moyen pour nos clients</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="impact-metric metric-2">
+                    <div class="metric-value">15%</div>
+                    <p class="mb-0">d'amélioration des performances commerciales</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="impact-metric metric-3">
+                    <div class="metric-value">100%</div>
+                    <p class="mb-0">de satisfaction client sur nos formations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cas Clients Section -->
+<section id="cas-clients" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Nos Cas Clients</h2>
+        <p class="lead text-center mb-5">Des solutions sur mesure adaptées à chaque défi spécifique</p>
+        
+        <!-- Cas Client 1 -->
+        <div class="case-card case-1">
+            <div class="case-header">
+                <div class="case-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Cas Client #1 : ONG Internationale</h3>
+                <span class="industry-tag">Secteur : Humanitaire</span>
+                <span class="industry-tag">Taille : 200+ employés</span>
+                <span class="industry-tag">Intervention : Audit + Formation</span>
+            </div>
+            <div class="case-body">
+                <div class="challenge-box">
+                    <h5><i class="fas fa-exclamation-triangle me-2"></i> Défi</h5>
+                    <p class="mb-0">L'équipe logistique passait 3 jours par mois à compiler manuellement des rapports d'activité sur 15 pays, avec des risques d'erreurs et des délais critiques pour les décisions opérationnelles.</p>
+                </div>
+                
+                <div class="solution-box">
+                    <h5><i class="fas fa-lightbulb me-2"></i> Solution</h5>
+                    <p class="mb-0">Audit complet des processus + formation Power Query & tableaux de bord interactifs avec automatisation des consolidations et création de visualisations temps réel.</p>
+                </div>
+                
+                <h5 class="mt-4">Résultats Concrets</h5>
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Gain de temps : 85%</h6>
+                        <p class="mb-0">Réduction du temps de reporting de 3 jours à 3 heures mensuellement</p>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Élimination des erreurs</h6>
+                        <p class="mb-0">Suppression complète des erreurs de saisie manuelle grâce à l'automatisation</p>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Meilleure prise de décision</h6>
+                        <p class="mb-0">Visualisations temps réel permettant une analyse rapide et des décisions éclairées</p>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="stat-badge highlight">⏱ 85% de temps gagné</span>
+                    <span class="stat-badge">✅ 0 erreur de saisie</span>
+                    <span class="stat-badge">📈 Décisions en temps réel</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cas Client 2 -->
+        <div class="case-card case-2">
+            <div class="case-header">
+                <div class="case-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>Cas Client #2 : PME Industrielle</h3>
+                <span class="industry-tag">Secteur : Industrie</span>
+                <span class="industry-tag">Taille : 50 employés</span>
+                <span class="industry-tag">Intervention : Outil sur mesure + Formation</span>
+            </div>
+            <div class="case-body">
+                <div class="challenge-box">
+                    <h5><i class="fas fa-exclamation-triangle me-2"></i> Défi</h5>
+                    <p class="mb-0">Service commercial incapable de suivre efficacement le pipeline de ventes, avec une visibilité limitée sur les opportunités et un taux de conversion sous-optimal.</p>
+                </div>
+                
+                <div class="solution-box">
+                    <h5><i class="fas fa-lightbulb me-2"></i> Solution</h5>
+                    <p class="mb-0">Création d'un outil de suivi commercial sur mesure avec tableau de bord interactif + formation personnalisée de l'équipe commerciale.</p>
+                </div>
+                
+                <h5 class="mt-4">Résultats Concrets</h5>
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-binoculars"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Visibilité complète</h6>
+                        <p class="mb-0">Tableau de bord unifié offrant une vision à 360° du funnel commercial</p>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Augmentation de 15% du taux de conversion</h6>
+                        <p class="mb-0">Meilleur suivi des opportunités et actions commerciales plus ciblées</p>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Processus optimisé</h6>
+                        <p class="mb-0">Automatisation du suivi client et des relances commerciales</p>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="stat-badge highlight">📊 Funnel commercial unifié</span>
+                    <span class="stat-badge">🎯 +15% de conversion</span>
+                    <span class="stat-badge">⚡ Processus optimisé</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cas Client 3 -->
+        <div class="case-card case-3">
+            <div class="case-header">
+                <div class="case-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>Cas Client #3 : Grande Distribution</h3>
+                <span class="industry-tag">Secteur : Distribution</span>
+                <span class="industry-tag">Taille : 500+ employés</span>
+                <span class="industry-tag">Intervention : Audit + Programme de formation</span>
+            </div>
+            <div class="case-body">
+                <div class="challenge-box">
+                    <h5><i class="fas fa-exclamation-triangle me-2"></i> Défi</h5>
+                    <p class="mb-0">Équipes hétérogènes avec des niveaux Excel très variables, entraînant des incohérences dans les rapports et une perte de productivité collective.</p>
+                </div>
+                
+                <div class="solution-box">
+                    <h5><i class="fas fa-lightbulb me-2"></i> Solution</h5>
+                    <p class="mb-0">Audit des compétences complet + programme de formation progressif adapté à chaque niveau avec suivi personnalisé.</p>
+                </div>
+                
+                <h5 class="mt-4">Résultats Concrets</h5>
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">100% des équipes montées en compétences</h6>
+                        <p class="mb-0">Progression mesurable pour l'ensemble des collaborateurs formés</p>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Formations ciblées selon les vrais besoins</h6>
+                        <p class="mb-0">Programmes adaptés aux métiers spécifiques de la distribution</p>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Autonomie accrue sur les outils métier</h6>
+                        <p class="mb-0">Capacité à créer et maintenir leurs propres outils d'analyse</p>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="stat-badge highlight">🎓 100% de progression</span>
+                    <span class="stat-badge">📋 Formations ciblées</span>
+                    <span class="stat-badge">💡 Autonomie renforcée</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Clients -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h3 class="text-center mb-5">Ils nous font confiance</h3>
+        <div class="client-logos">
+            <div class="client-logo">ONG Internationale</div>
+            <div class="client-logo">PME Industrielle</div>
+            <div class="client-logo">Grande Distribution</div>
+            <div class="client-logo">Startup Tech</div>
+            <div class="client-logo">Association</div>
+            <div class="client-logo">Groupe International</div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Témoignages -->
+<section id="temoignages" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Témoignages Clients</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="client-avatar">SL</div>
+                        <div>
+                            <h6 class="mb-0">Sarah Lefèvre</h6>
+                            <small class="text-muted">Directrice Logistique, ONG Internationale</small>
+                        </div>
+                    </div>
+                    <p class="mb-0">"La transformation a été spectaculaire. Nous passons de 3 jours de reporting à seulement 3 heures, avec une fiabilité bien supérieure. Nos équipes sur le terrain reçoivent maintenant des informations en temps réel pour leurs décisions critiques."</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="client-avatar">TM</div>
+                        <div>
+                            <h6 class="mb-0">Thomas Martin</h6>
+                            <small class="text-muted">Directeur Commercial, PME Industrielle</small>
+                        </div>
+                    </div>
+                    <p class="mb-0">"L'outil de suivi commercial créé sur mesure a révolutionné notre façon de travailler. Nous avons augmenté notre taux de conversion de 15% simplement grâce à une meilleure visibilité sur notre pipeline. Un retour sur investissement exceptionnel."</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="client-avatar">CD</div>
+                        <div>
+                            <h6 class="mb-0">Céline Dubois</h6>
+                            <small class="text-muted">DRH, Groupe de Distribution</small>
+                        </div>
+                    </div>
+                    <p class="mb-0">"Le programme de formation progressif a permis à toutes nos équipes, quel que soit leur niveau initial, de monter en compétences. La cohérence et la qualité de nos reporting se sont considérablement améliorées. Un investissement très rentable."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section CTA -->
+<section id="contact" class="cta-section text-center">
+    <div class="container">
+        <h2 class="mb-4">Prêt à obtenir des résultats similaires ?</h2>
+        <p class="lead mb-4">Contactez-nous pour transformer vos défis en succès avec des solutions Excel et Power BI sur mesure</p>
+        <a href="#" class="btn btn-custom btn-lg px-5 me-3"><i class="fas fa-paper-plane me-2"></i>Discutons de votre projet</a>
+        <a href="#" class="btn btn-outline-success btn-lg px-5"><i class="fas fa-download me-2"></i>Télécharger notre brochure</a>
+    </div>
+</section>
+
+{% endblock %}

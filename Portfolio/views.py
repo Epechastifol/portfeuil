@@ -51,3 +51,12 @@ def Evaluation(request):
 
 def Services(request):
     return render(request, 'portfolio/services.html')
+
+def ContactsDevis(request):
+    return render(request, 'portfolio/contacts_devis.html')
+
+def Cas_Client(request):
+    return render(request, 'portfolio/cas_client.html')
+
+def Service_Supplementaire(request):
+    return render(request, 'portfolio/services_sup.html')

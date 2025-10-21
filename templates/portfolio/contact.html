@@ -1,64 +1,295 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %} Contact Moi {% endblock %}
+{% block style %} 
+    <link rel="stylesheet" href="{% static 'css/home/contact.css' %}">
+{% endblock %}
 
 {% block content %}
 <canvas></canvas>
-<!-- Section Contact -->
-     <div class="container mt-3"> 
-        <h1 class="h2 alert alert-success mb-4 text-center">Contactez-moi</h1> 
-         
-        <!-- Messages d'alerte --> 
-        {% if messages %} 
-            {% for message in messages %} 
-                <div class="alert alert-{{ message.tags }} alert-dismissible text-center fade show" role="alert"> 
-                    {{ message }} 
-                    <button type="button" class="btn-close text-center" data-bs-dismiss="alert"></button> 
-                </div> 
-            {% endfor %} 
-        {% endif %} 
- 
-        <form method="post" class="mt-4"> 
-            {% csrf_token %} 
-             
-            <div class="mb-3"> 
-                {{ form.name }} 
-                {% if form.name.errors %} 
-                    <div class="text-danger">{{ form.name.errors }}</div> 
-                {% endif %} 
-            </div> 
-             
-            <div class="mb-3"> 
-                {{ form.email }} 
-                {% if form.email.errors %} 
-                    <div class="text-danger">{{ form.email.errors }}</div> 
-                {% endif %} 
-            </div> 
-             
-            <div class="mb-3"> 
-                {{ form.subject }} 
-                {% if form.subject.errors %} 
-                    <div class="text-danger">{{ form.subject.errors }}</div> 
-                {% endif %} 
-            </div> 
-             
-            <div class="mb-3"> 
-                {{ form.message }} 
-                {% if form.message.errors %} 
-                    <div class="text-danger">{{ form.message.errors }}</div> 
-                {% endif %} 
-            </div> 
-             
-            <button type="submit" class="btn btn-success w-100 mt-3">Envoyer le message</button> 
-        </form> 
- 
-        <!-- Version simplifiée du formulaire --> 
-        <!--  
-        <form method="post"> 
-            {% csrf_token %} 
-            {{ form.as_p }} 
-            <button type="submit" class="btn btn-primary">Envoyer</button> 
-        </form> 
-        --> 
+
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container position-relative">
+        <h1 class="display-4 fw-bold mb-4">📞 Contactez-Nous</h1>
+        <p class="lead mb-5">Prêt à optimiser vos compétences Excel & Power BI ? Discutons de votre projet</p>
+        <a href="#formulaire" class="btn btn-light btn-lg px-5 me-3">Demander un Devis</a>
+        <a href="#contact-methods" class="btn btn-outline-light btn-lg px-5">Nous Contacter</a>
     </div>
+</section>
+
+<!-- Contact Methods Section -->
+<section id="contact-methods" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Prenez rendez-vous pour un diagnostic initial gratuit</h2>
+        <p class="lead text-center mb-5">Plusieurs moyens pour nous contacter et discuter de votre projet</p>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">📧 Email</h4>
+                        <p class="mb-1 fs-5">contact@excelpro-formation.com</p>
+                        <small class="text-muted">Réponse garantie sous 24 heures</small>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">📱 Téléphone</h4>
+                        <p class="mb-1 fs-5">+33 1 23 45 67 89</p>
+                        <small class="text-muted">Lun-Ven 9h-18h | Réponse immédiate</small>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">💼 LinkedIn</h4>
+                        <p class="mb-1 fs-5">linkedin.com/in/excelpro-formation</p>
+                        <small class="text-muted">Message direct et partage de contenu expert</small>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">📅 Rendez-vous en ligne</h4>
+                        <p class="mb-1 fs-5">Calendly.com/excelpro</p>
+                        <small class="text-muted">Planifiez directement une visioconférence</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <div class="guarantee-card">
+                <h3><i class="fas fa-award me-2"></i> Premier Diagnostic Offert</h3>
+                <p class="mb-0 fs-5">Notre premier échange est gratuit et sans engagement. Nous analysons vos besoins et vous proposons la solution la plus adaptée.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Formulaire Section -->
+<section id="formulaire" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="section-title">Demandez votre Devis Personnalisé</h2>
+                <p class="lead mb-4">Remplissez ce formulaire pour obtenir une proposition sur mesure adaptée à vos besoins spécifiques.</p>
+                
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">Prénom *</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">Nom *</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="phone" class="form-label">Téléphone</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="company" class="form-label">Entreprise / Organisation</label>
+                        <input type="text" class="form-control" id="company">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="service" class="form-label">Service souhaité *</label>
+                        <select class="form-select" id="service" required>
+                            <option value="">Sélectionnez un service</option>
+                            <option value="formation-excel">Formation Excel</option>
+                            <option value="formation-powerbi">Formation Power BI</option>
+                            <option value="audit">Audit des compétences</option>
+                            <option value="consulting">Consulting sur mesure</option>
+                            <option value="developpement">Développement VBA/Power Query</option>
+                            <option value="coaching">Coaching individuel</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="participants" class="form-label">Nombre de participants (si formation)</label>
+                        <input type="number" class="form-control" id="participants" min="1">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="urgency" class="form-label">Urgence du projet</label>
+                        <select class="form-select" id="urgency">
+                            <option value="">Sélectionnez une option</option>
+                            <option value="immediate">Immédiate (début sous 2 semaines)</option>
+                            <option value="short-term">Court terme (début sous 1 mois)</option>
+                            <option value="medium-term">Moyen terme (début sous 3 mois)</option>
+                            <option value="long-term">Long terme (planification)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Décrivez votre besoin *</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Décrivez votre projet, vos objectifs, les défis que vous rencontrez, vos contraintes techniques..." required></textarea>
+                    </div>
+                    
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="newsletter">
+                        <label class="form-check-label" for="newsletter">Je souhaite recevoir les actualités et conseils Excel/Power BI</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-custom btn-lg w-100">
+                        <i class="fas fa-paper-plane me-2"></i>Envoyer ma demande de devis
+                    </button>
+                </form>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="intervention-zone d-flex align-items-start mb-4">
+                    <div class="zone-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Zones d'Intervention</h4>
+                        <p class="mb-2"><strong>Formations en présentiel :</strong> Île-de-France et région parisienne</p>
+                        <p class="mb-2"><strong>Formations à distance :</strong> France entière et international</p>
+                        <p class="mb-0"><strong>Audits et consulting :</strong> Partout en France et à l'international</p>
+                    </div>
+                </div>
+                
+                <h5 class="mt-4 mb-3">Pourquoi nous contacter ?</h5>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div>
+                        <h6>Devis personnalisé gratuit</h6>
+                        <p class="mb-0">Proposition détaillée adaptée à votre contexte et budget</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div>
+                        <h6>Expertise reconnue</h6>
+                        <p class="mb-0">Échange avec un expert certifié Microsoft</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h6>Solutions sur mesure</h6>
+                        <p class="mb-0">Réponses adaptées à vos défis spécifiques</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-mini">
+                    <p class="fst-italic">"Réponse rapide et proposition très professionnelle. L'audit découverte nous a permis d'identifier précisément nos besoins en formation."</p>
+                    <p class="mb-0 fw-bold">- Responsable Formation, Groupe Industriel</p>
+                </div>
+                
+                <div class="testimonial-mini">
+                    <p class="fst-italic">"Le coaching individuel a transformé ma façon de travailler avec Excel. Je gagne plusieurs heures par semaine maintenant."</p>
+                    <p class="mb-0 fw-bold">- Chef de Projet, PME Technologique</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Nos Services</h2>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <div class="contact-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>Formations</h4>
+                    </div>
+                    <div class="contact-body">
+                        <p>Formations Excel et Power BI adaptées à tous les niveaux, en présentiel ou distanciel.</p>
+                        <div class="mb-3">
+                            <span class="service-badge">Excel</span>
+                            <span class="service-badge">Power BI</span>
+                            <span class="service-badge">VBA</span>
+                        </div>
+                        <a href="#formulaire" class="btn btn-outline-primary w-100">Demander un devis</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <div class="contact-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Audits</h4>
+                    </div>
+                    <div class="contact-body">
+                        <p>Évaluation de vos compétences et processus pour optimiser votre productivité.</p>
+                        <div class="mb-3">
+                            <span class="service-badge">Diagnostic</span>
+                            <span class="service-badge">Recommandations</span>
+                            <span class="service-badge">ROI</span>
+                        </div>
+                        <a href="#formulaire" class="btn btn-outline-primary w-100">Demander un audit</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <div class="contact-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Consulting</h4>
+                    </div>
+                    <div class="contact-body">
+                        <p>Solutions sur mesure pour automatiser vos processus et créer des outils adaptés.</p>
+                        <div class="mb-3">
+                            <span class="service-badge">VBA</span>
+                            <span class="service-badge">Power Query</span>
+                            <span class="service-badge">Modèles</span>
+                        </div>
+                        <a href="#formulaire" class="btn btn-outline-primary w-100">Discuter de mon projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

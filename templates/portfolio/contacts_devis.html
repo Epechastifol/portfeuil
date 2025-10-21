@@ -1,0 +1,308 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Contacts & Devis personnalisé {% endblock %}
+
+{% block style %}   
+<link rel="stylesheet" href="{% static 'css/home/contact_devis.css' %}">
+{% endblock %}
+
+{% block content %}
+<canvas></canvas>
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container position-relative">
+        <h1 class="display-4 fw-bold mb-4">📞 Contact & Devis Personnalisé</h1>
+        <p class="lead mb-5">Prêt à Transformer Vos Compétences Data ?</p>
+        <a href="#formulaire" class="btn btn-light btn-lg px-5 me-3">Demander un Devis</a>
+        <a href="#contact" class="btn btn-outline-light btn-lg px-5">Nous Contacter</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Mes Zones d'Intervention</h2>
+        <p class="lead text-center mb-5">Des solutions adaptées à tous vos besoins en formation et consulting Excel/Power BI</p>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <div class="contact-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>🎯 Formations</h4>
+                    </div>
+                    <div class="contact-body">
+                        <p>Formations en présentiel et distanciel adaptées à tous les niveaux, du débutant à l'expert.</p>
+                        <div class="mb-3">
+                            <span class="service-badge">Présentiel</span>
+                            <span class="service-badge">Distanciel</span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Région Île-de-France</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Partout en France</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Sessions en entreprise</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Cours individuels</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <div class="contact-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>🔍 Audits</h4>
+                    </div>
+                    <div class="contact-body">
+                        <p>Évaluation complète de vos compétences et processus pour optimiser votre productivité.</p>
+                        <div class="mb-3">
+                            <span class="service-badge">Sur site</span>
+                            <span class="service-badge">À distance</span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Partout en France</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> International</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Audit découverte gratuit</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Rapport détaillé</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <div class="contact-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>💼 Consulting</h4>
+                    </div>
+                    <div class="contact-body">
+                        <p>Solutions sur mesure pour automatiser vos processus et créer des outils adaptés à vos besoins.</p>
+                        <div class="mb-3">
+                            <span class="service-badge">Sur mesure</span>
+                            <span class="service-badge">Projets</span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Développement VBA</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Modèles Excel</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Solutions Power BI</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Accompagnement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Methods Section -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Prenez rendez-vous pour un diagnostic initial gratuit</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">📧 Email</h5>
+                        <p class="mb-0">contact@excelpro-formation.com</p>
+                        <small class="text-muted">Réponse sous 24 heures</small>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">📱 Téléphone</h5>
+                        <p class="mb-0">+33 1 23 45 67 89</p>
+                        <small class="text-muted">Lun-Ven 9h-18h</small>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">💼 LinkedIn</h5>
+                        <p class="mb-0">linkedin.com/in/excelpro-formation</p>
+                        <small class="text-muted">Message direct</small>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">📅 Rendez-vous en ligne</h5>
+                        <p class="mb-0">Calendly.com/excelpro</p>
+                        <small class="text-muted">Planifier directement</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Formulaire Section -->
+<section id="formulaire" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="section-title">Demandez votre Devis Personnalisé</h2>
+                <p class="lead mb-4">Utilisez le formulaire ci-dessous pour obtenir une proposition sur mesure adaptée à vos besoins.</p>
+                
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">Prénom *</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">Nom *</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="phone" class="form-label">Téléphone</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="company" class="form-label">Entreprise / Organisation</label>
+                        <input type="text" class="form-control" id="company">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="service" class="form-label">Service souhaité *</label>
+                        <select class="form-select" id="service" required>
+                            <option value="">Sélectionnez un service</option>
+                            <option value="formation">Formation Excel/Power BI</option>
+                            <option value="audit">Audit des compétences</option>
+                            <option value="consulting">Consulting sur mesure</option>
+                            <option value="developpement">Développement VBA/Power Query</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Décrivez votre besoin *</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Décrivez votre projet, vos objectifs, le nombre de personnes concernées, vos contraintes..." required></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="budget" class="form-label">Budget prévisionnel (optionnel)</label>
+                        <select class="form-select" id="budget">
+                            <option value="">Sélectionnez une fourchette</option>
+                            <option value="1">Moins de 1 000 €</option>
+                            <option value="2">1 000 € - 3 000 €</option>
+                            <option value="3">3 000 € - 5 000 €</option>
+                            <option value="4">5 000 € - 10 000 €</option>
+                            <option value="5">Plus de 10 000 €</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="newsletter">
+                        <label class="form-check-label" for="newsletter">Je souhaite recevoir les actualités et conseils Excel/Power BI</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-custom btn-lg w-100">
+                        <i class="fas fa-paper-plane me-2"></i>Envoyer ma demande de devis
+                    </button>
+                </form>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="intervention-zone d-flex align-items-start mb-4">
+                    <div class="zone-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h5>Zones d'Intervention</h5>
+                        <p class="mb-1"><strong>Présentiel :</strong> Île-de-France</p>
+                        <p class="mb-1"><strong>Distanciel :</strong> France entière</p>
+                        <p class="mb-0"><strong>International :</strong> Sur demande</p>
+                    </div>
+                </div>
+                
+                <div class="guarantee-card">
+                    <h4><i class="fas fa-award me-2"></i> Diagnostic Gratuit</h4>
+                    <p class="mb-0">Premier rendez-vous offert pour analyser vos besoins et vous proposer la solution la plus adaptée</p>
+                </div>
+                
+                <h5 class="mt-4">Pourquoi nous contacter ?</h5>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div>
+                        <h6>Obtenir un devis personnalisé</h6>
+                        <p class="mb-0">Proposition détaillée adaptée à votre contexte</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div>
+                        <h6>Discuter de vos besoins spécifiques</h6>
+                        <p class="mb-0">Échange avec un expert pour identifier la meilleure solution</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div>
+                        <h6>Planifier un audit découverte gratuit</h6>
+                        <p class="mb-0">Analyse initiale sans engagement pour évaluer vos besoins</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-mini">
+                    <p class="fst-italic">"Réponse rapide et proposition très professionnelle. L'audit découverte nous a permis d'identifier précisément nos besoins."</p>
+                    <p class="mb-0 fw-bold">- Responsable Formation, Groupe Industriel</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-light text-center">
+    <div class="container">
+        <h3 class="mb-4">Vous avez un projet urgent ?</h3>
+        <p class="lead mb-4">Contactez-nous directement par téléphone pour une réponse immédiate</p>
+        <a href="tel:+33123456789" class="btn btn-custom btn-lg px-5 me-3">
+            <i class="fas fa-phone me-2"></i>Nous Appeler
+        </a>
+        <a href="mailto:contact@excelpro-formation.com" class="btn btn-outline-success btn-lg px-5">
+            <i class="fas fa-envelope me-2"></i>Envoyer un Email
+        </a>
+    </div>
+</section>
+
+{% endblock %}
