@@ -79,7 +79,7 @@
                     <table class="table table-striped"> 
                         <thead> 
                             <tr class="text-center"> 
-                                <th>Nom</th> 
+                                <th>Nom & Prénom</th> 
                                 <th>Email</th> 
                                 <th>Sujet</th> 
                                 <th>Date</th>
@@ -89,9 +89,9 @@
                         <tbody> 
                             {% for contact in recent_contacts %} 
                             <tr class="text-center"> 
-                                <td><strong>{{ contact.name }}</strong></td> 
+                                <td><strong>{{ contact.firstName }} {{ contact.lastName }}</strong></td> 
                                 <td>{{ contact.email }}</td> 
-                                <td>{{ contact.subject|truncatewords:5 }}</td> 
+                                <td>{{ contact.message|truncatewords:5 }}</td> 
                                 <td>{{ contact.created_at|date:"H:i d/m/Y" }}</td>
                                 <td>
                                     <a href="{% url 'message_read' contact.pk %}" class="btn btn-success btn-sm me-2" title="Détails">
