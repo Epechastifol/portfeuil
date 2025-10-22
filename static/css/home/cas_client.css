@@ -278,7 +278,7 @@ body {
 .industry-tag {
     display: inline-block;
     background: rgba(42, 82, 152, 0.1);
-    color: var(--primary);
+    color: var(--light);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.85rem;
