@@ -90,37 +90,38 @@
                 <h2 class="section-title">Demandez votre Devis Personnalisé</h2>
                 <p class="lead mb-4">Remplissez ce formulaire pour obtenir une proposition sur mesure adaptée à vos besoins spécifiques.</p>
                 
-                <form id="contactForm">
+                <form id="contactForm" method="post" action="{% url 'contact' %}">
+                    {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="firstName" class="form-label">Prénom *</label>
-                            <input type="text" class="form-control" id="firstName" required>
+                            <input type="text" class="form-control" id="firstName" name="firstName" value="{{ firstName|default:'' }}" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="lastName" class="form-label">Nom *</label>
-                            <input type="text" class="form-control" id="lastName" required>
+                            <input type="text" class="form-control" id="lastName" name="lastName" value="{{ lastName|default:'' }}" required>
                         </div>
                     </div>
                     
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="email" class="form-label">Email *</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ email|default:'' }}" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="phone" class="form-label">Téléphone</label>
-                            <input type="tel" class="form-control" id="phone">
+                            <input type="tel" class="form-control" id="phone" name="phone" value="{{ phone|default:'' }}">
                         </div>
                     </div>
                     
                     <div class="mb-3">
                         <label for="company" class="form-label">Entreprise / Organisation</label>
-                        <input type="text" class="form-control" id="company">
+                        <input type="text" class="form-control" id="company" name="company" value="{{ company|default:'' }}">
                     </div>
                     
                     <div class="mb-3">
                         <label for="service" class="form-label">Service souhaité *</label>
-                        <select class="form-select" id="service" required>
+                        <select class="form-select" id="service" name="service" required>
                             <option value="">Sélectionnez un service</option>
                             <option value="formation-excel">Formation Excel</option>
                             <option value="formation-powerbi">Formation Power BI</option>
@@ -134,12 +135,12 @@
                     
                     <div class="mb-3">
                         <label for="participants" class="form-label">Nombre de participants (si formation)</label>
-                        <input type="number" class="form-control" id="participants" min="1">
+                        <input type="number" class="form-control" id="participants" name="participants" min="1">
                     </div>
                     
                     <div class="mb-3">
                         <label for="urgency" class="form-label">Urgence du projet</label>
-                        <select class="form-select" id="urgency">
+                        <select class="form-select" id="urgency" name="urgency">
                             <option value="">Sélectionnez une option</option>
                             <option value="immediate">Immédiate (début sous 2 semaines)</option>
                             <option value="short-term">Court terme (début sous 1 mois)</option>
@@ -150,12 +151,17 @@
                     
                     <div class="mb-3">
                         <label for="message" class="form-label">Décrivez votre besoin *</label>
-                        <textarea class="form-control" id="message" rows="5" placeholder="Décrivez votre projet, vos objectifs, les défis que vous rencontrez, vos contraintes techniques..." required></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Décrivez votre projet, vos objectifs, les défis que vous rencontrez, vos contraintes techniques..." required>{{ message|default:'' }}</textarea>
                     </div>
                     
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="newsletter">
+                        <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter" {% if newsletter %}checked{% endif %}>
                         <label class="form-check-label" for="newsletter">Je souhaite recevoir les actualités et conseils Excel/Power BI</label>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="budget" class="form-label">Budget Prévisionnel (optionnel)</label>
+                        <input type="text" class="form-control" id="budget" name="budget" value="{{ budget|default:'' }}">
                     </div>
                     
                     <button type="submit" class="btn btn-custom btn-lg w-100">
