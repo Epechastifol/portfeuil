@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.template.response import TemplateResponse 
 from django.urls import path 
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import DeleteView
 from django.db.models import Count 
@@ -59,12 +59,12 @@ class CustomAdminSite(admin.AdminSite):
         return redirect('admin:login')
 
 
-    def Messages_List(request):
-        messages = ContactMessage.objects.all()
+    def Messages_List(self, request):
+        messages_qs = ContactMessage.objects.all().order_by('-created_at')
         context = {
-            'all_messages': messages,
+            'all_messages': messages_qs,
         }
-        return render(request, 'admin/messages_list.html', context)
+        return render(request, 'admin/message_list.html', context)
     
     class MessageDeleteView(SuccessMessageMixin, DeleteView):
         model = ContactMessage
