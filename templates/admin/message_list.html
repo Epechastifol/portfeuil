@@ -22,8 +22,6 @@
                                 <th>Entreprise</th>
                                 <th>Service</th>
                                 <th>Message</th>
-                                <th>Budget</th>
-                                <th>Newsletter</th>
                                 <th>Lu</th>
                                 <th>Date</th>
                                 <th>Actions</th>
@@ -37,9 +35,7 @@
                                 <td>{{ message.phone|default:'-' }}</td>
                                 <td>{{ message.company|default:'-' }}</td>
                                 <td>{{ message.service|truncatewords:3 }}</td>
-                                <td class="text-start">{{ message.message|truncatewords:12 }}</td>
-                                <td>{{ message.budget|default:'-' }}</td>
-                                <td>{% if message.newsletter %}<span class="badge bg-success">Oui</span>{% else %}<span class="badge bg-secondary">Non</span>{% endif %}</td>
+                                <td class="text-start">{{ message.message|truncatewords:7 }}</td>
                                 <td>{% if message.is_read %}<span class="badge bg-info text-dark">Lu</span>{% else %}<span class="badge bg-warning text-dark">Non lu</span>{% endif %}</td>
                                 <td>{{ message.created_at|date:"H:i d/m/Y" }}</td>
                                 <td>
