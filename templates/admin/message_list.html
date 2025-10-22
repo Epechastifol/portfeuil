@@ -24,14 +24,14 @@
                                 <th>Entreprise</th>
                                 <th>Service</th>
                                 <th>Lu</th>
-                                <th>Date</th>
+                                <th>Heure & Date</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for message in all_messages %}
                             <tr class="text-center">
-                                <td class="text-start">{{ message.firstName }} {{ message.lastName }}</td>
+                                <th class="text-start">{{ message.firstName }} {{ message.lastName }}</th>
                                 <td>{{ message.email }}</td>
                                 <td>{{ message.phone|default:'-' }}</td>
                                 <td>{{ message.company|default:'-' }}</td>
