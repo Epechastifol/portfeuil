@@ -22,7 +22,7 @@ def Contact_View(request):
         # Basic validation
         if not (firstName and lastName and email and service and message_text):
             messages.error(request, "Veuillez remplir les champs obligatoires.")
-            return render(request, 'portfolio/contact.html', {
+            return render(request, 'portfolio/contact_devis.html', {
                 'firstName': firstName,
                 'lastName': lastName,
                 'email': email,
@@ -48,7 +48,7 @@ def Contact_View(request):
         messages.success(request, "Merci ! Votre demande a bien été envoyée. Nous vous répondrons rapidement.")
         return redirect('home')
 
-    return render(request, 'portfolio/contact.html')
+    return render(request, 'portfolio/contact_devis.html')
 
 
 class MessageDetailView(DetailView):
@@ -57,8 +57,6 @@ class MessageDetailView(DetailView):
 	context_object_name = 'message'
 
 
-def Audit(request):
-    return render(request, 'portfolio/audit.html')
 
 def Evaluation(request):
     return render(request, 'portfolio/evaluation.html')
@@ -71,6 +69,3 @@ def ContactsDevis(request):
 
 def Cas_Client(request):
     return render(request, 'portfolio/cas_client.html')
-
-def Service_Supplementaire(request):
-    return render(request, 'portfolio/services_sup.html')

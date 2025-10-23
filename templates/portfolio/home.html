@@ -256,7 +256,7 @@
                 <p class="text-muted">Visualisation et tableaux de bord</p>
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
-                <img src="{% static 'images/kobo.png' %}" width="300" height="95" alt="">
+                <img src="{% static 'images/kobo.png' %}" width="250" height="95" alt="">
                 <h3>KobotoolBox</h3>
                 <p class="text-muted">Collecte et gestion de données de terrain</p>
             </div>
@@ -399,18 +399,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <form class="contact-form" method="post" action="{% url 'contact' %}">
-                    {% csrf_token %} 
-                    <div class="form-group">
-                        {{ form }}
-                    </div>
-                    
-                    <button type="submit" class="btn btn-success">
-                        <i class="fas fa-paper-plane"></i>
-                        Envoyer le message
-                    </button>
-                </form>
+
             </div>
         </div>
     </section>

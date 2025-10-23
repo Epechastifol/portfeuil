@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} Audit & Evaluation {% endblock %}
+{% block title %} Mes Services {% endblock %}
 
 {% block style %}   
 <link rel="stylesheet" href="{% static 'css/home/services.css' %}">
+<link rel="stylesheet" href="{% static 'css/home/services_sup.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -13,16 +14,17 @@
 <section class="hero-section text-center">
     <div class="container">
         <h1 class="display-4 fw-bold mb-4">🎓 Formations Excel & Power BI</h1>
-        <p class="lead mb-5">Des fondamentaux à l'expertise avancée pour transformer vos données en décisions stratégiques</p>
+        <h1 class="display-4 fw-bold mb-4">Audit & Évaluation Excel</h1>
+        <p class="lead mb-3">Des fondamentaux à l'expertise avancée pour transformer vos données en décisions stratégiques</p>
+        <p class="lead mb-5">Optimisez la productivité de votre entreprise grâce à une utilisation maîtrisée d'Excel</p>
         <a href="#excel" class="btn btn-light btn-lg px-5 me-3">Découvrir Excel</a>
-        <a href="#powerbi" class="btn btn-outline-light btn-lg px-5">Découvrir Power BI</a>
+        <a href="#powerbi" class="btn btn-light btn-lg px-5 me-3">Découvrir Power BI</a>
     </div>
 </section>
-
 <!-- Formations Excel -->
 <section id="excel" class="py-5">
     <div class="container">
-        <h2 class="section-title">Excel - Parcours Progressifs</h2>
+        <h2 class="section-title text-center">Excel - Parcours Progressifs</h2>
         <p class="lead mb-5">Un programme de formation structuré pour maîtriser Excel à tous les niveaux</p>
         
         <div class="row g-4">
@@ -104,7 +106,7 @@
 <!-- Formations Power BI -->
 <section id="powerbi" class="py-5 bg-light">
     <div class="container">
-        <h2 class="section-title">Power BI - De la Data à la Décision</h2>
+        <h2 class="section-title text-center">Power BI - De la Data à la Décision</h2>
         <p class="lead mb-5">Transformez vos données en insights actionnables avec Power BI</p>
         
         <div class="row g-4">
@@ -241,6 +243,184 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Nos Services Complémentaires</h2>
+        <p class="lead text-center mb-5">Des solutions adaptées à vos besoins spécifiques pour maximiser votre productivité</p>
+        
+        <div class="row g-4">
+            <!-- Service 1 -->
+            <div class="col-lg-6">
+                <div class="service-card service-1">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <h3>📋 Création de modèles Excel sur mesure</h3>
+                    </div>
+                    <div class="service-body">
+                        <p>Des modèles Excel personnalisés conçus spécifiquement pour vos processus métier, avec une interface utilisateur intuitive et des fonctionnalités adaptées à vos besoins.</p>
+                        <ul class="feature-list">
+                            <li>Modèles adaptés à votre secteur d'activité</li>
+                            <li>Formules et calculs automatisés</li>
+                            <li>Interface utilisateur intuitive</li>
+                            <li>Tableaux de bord intégrés</li>
+                            <li>Documentation complète</li>
+                            <li>Formation à l'utilisation incluse</li>
+                        </ul>
+                        <div class="mt-4">
+                            <span class="benefit-tag">Gain de temps</span>
+                            <span class="benefit-tag">Réduction d'erreurs</span>
+                            <span class="benefit-tag">Standardisation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="col-lg-6">
+                <div class="service-card service-2">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>⚡ Automatisation de processus avec VBA/Power Query</h3>
+                    </div>
+                    <div class="service-body">
+                        <p>Automatisez vos tâches répétitives et gagnez un temps précieux grâce à des solutions VBA et Power Query adaptées à vos processus spécifiques.</p>
+                        <ul class="feature-list">
+                            <li>Macros VBA personnalisées</li>
+                            <li>Automatisation des imports de données</li>
+                            <li>Création de rapports automatiques</li>
+                            <li>Intégration avec d'autres applications</li>
+                            <li>Maintenance et support technique</li>
+                            <li>Formation des utilisateurs</li>
+                        </ul>
+                        <div class="mt-4">
+                            <span class="benefit-tag">Productivité ×3</span>
+                            <span class="benefit-tag">Élimination des erreurs</span>
+                            <span class="benefit-tag">Processus optimisés</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="col-lg-6">
+                <div class="service-card service-3">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>👨‍💻 Coaching individuel "Excel Coach"</h3>
+                    </div>
+                    <div class="service-body">
+                        <p>Un accompagnement personnalisé pour maîtriser Excel dans votre contexte professionnel spécifique, avec un expert dédié à vos besoins.</p>
+                        <ul class="feature-list">
+                            <li>Diagnostic personnalisé des besoins</li>
+                            <li>Plan de formation sur mesure</li>
+                            <li>Sessions individuelles en présentiel ou distanciel</li>
+                            <li>Support continu entre les sessions</li>
+                            <li>Exercices pratiques sur vos fichiers</li>
+                            <li>Suivi des progrès et ajustements</li>
+                        </ul>
+                        <div class="mt-4">
+                            <span class="benefit-tag">Apprentissage accéléré</span>
+                            <span class="benefit-tag">Application immédiate</span>
+                            <span class="benefit-tag">Résultats concrets</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="col-lg-6">
+                <div class="service-card service-4">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>📊 Ateliers migration Excel → Power BI</h3>
+                    </div>
+                    <div class="service-body">
+                        <p>Transitionnez efficacement vers Power BI avec nos ateliers pratiques qui vous accompagnent dans la migration de vos processus Excel existants.</p>
+                        <ul class="feature-list">
+                            <li>Audit de vos processus Excel existants</li>
+                            <li>Stratégie de migration progressive</li>
+                            <li>Ateliers pratiques en petits groupes</li>
+                            <li>Création de rapports Power BI pilotes</li>
+                            <li>Formation aux concepts DAX et Power Query</li>
+                            <li>Accompagnement au déploiement</li>
+                        </ul>
+                        <div class="mt-4">
+                            <span class="benefit-tag">Modernisation</span>
+                            <span class="benefit-tag">Analyses avancées</span>
+                            <span class="benefit-tag">Collaboration améliorée</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Témoignages -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h3 class="text-center mb-5">Ce que disent nos clients</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="client-avatar">ML</div>
+                        <div>
+                            <h6 class="mb-0">Marie Lambert</h6>
+                            <small class="text-muted">Directrice Administrative, ONG Environnement</small>
+                        </div>
+                    </div>
+                    <p class="mb-0">"Le modèle Excel créé sur mesure a transformé notre gestion de projets. Nous gagnons plusieurs heures par semaine et nos rapports sont bien plus fiables."</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="client-avatar">PD</div>
+                        <div>
+                            <h6 class="mb-0">Pierre Dubois</h6>
+                            <small class="text-muted">Responsable Financier, PME Industrielle</small>
+                        </div>
+                    </div>
+                    <p class="mb-0">"Le coaching individuel m'a permis de maîtriser des fonctions Excel avancées que j'utilisais mal. Mon efficacité a augmenté de façon spectaculaire."</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="client-avatar">XX</div>
+                        <div>
+                            <h6 class="mb-0">.....................</h6>
+                            <small class="text-muted">Directeur Financier</small>
+                        </div>
+                    </div>
+                    <p class="mb-0">"L'audit a révélé que notre service comptabilité passait 15h/semaine sur des tâches automatisables. La formation ciblée nous a fait gagner 12h/semaine."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section CTA -->
+<section id="contact" class="cta-section text-center">
+    <div class="container">
+        <h2 class="mb-4 section-title text-center">Prêt à optimiser votre utilisation d'Excel ?</h2>
+        <p class="lead mb-4">Contactez-nous pour un diagnostic gratuit et sans engagement</p>
+        <a href="{% url 'contacts_devis' %}" class="btn btn-outline-dark btn-lg px-5">Demander un audit</a>
     </div>
 </section>
 

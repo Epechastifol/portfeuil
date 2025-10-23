@@ -15,7 +15,7 @@
         <h1 class="display-4 fw-bold mb-4">🔍 Audit & Évaluation des Compétences</h1>
         <p class="lead mb-5">Service exclusif pour ONG et Entreprises</p>
         <a href="#methodologie" class="btn btn-light btn-lg px-5 me-3">Découvrir notre approche</a>
-        <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg px-5">Demander un audit</a>
+        <a href="{% url 'contacts_devis' %}" class="btn btn-outline-light btn-lg px-5">Demander un audit</a>
     </div>
 </section>
 
@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h2 class="section-title">Le constat</h2>
+                <h2 class="section-title text-center">Le constat</h2>
                 <p class="lead mb-4">"68% des utilisateurs Excel n'exploitent que 10% de ses fonctionnalités. Identifiez les gaps pour optimiser votre budget formation."</p>
                 
                 <div class="highlight-box">
@@ -69,92 +69,58 @@
     </div>
 </section>
 
+
 <!-- Section Méthodologie -->
 <section id="methodologie" class="py-5 bg-light">
     <div class="container">
-        <h2 class="section-title text-center">Ma méthodologie en 3 phases</h2>
-        <p class="lead text-center mb-5">Une approche structurée pour identifier précisément vos besoins en compétences</p>
-        
-        <!-- Process Flow -->
-        <div class="process-flow d-none d-md-block">
-            <div class="row">
-                <div class="col-md-4 process-step">
-                    <div class="step-number">1</div>
-                    <h5>Diagnostic Initial</h5>
-                </div>
-                <div class="col-md-4 process-step">
-                    <div class="step-number">2</div>
-                    <h5>Évaluation Technique</h5>
-                </div>
-                <div class="col-md-4 process-step">
-                    <div class="step-number">3</div>
-                    <h5>Rapport Stratégique</h5>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row g-4 mt-4">
-            <!-- Phase 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <div class="phase-icon">
-                            <i class="fas fa-search fa-2x"></i>
+        <h2 class="section-title text-center">Notre Méthodologie en 3 Étapes</h2>
+        <div class="row g-4">
+            <!-- Étape 1 -->
+            <div class="col-md-4">
+                <div class="card methodology-card">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-container">
+                            <i class="fas fa-search text-success fa-2x"></i>
                         </div>
-                        <h4>Phase 1 : Diagnostic Initial</h4>
-                    </div>
-                    <div class="phase-body">
-                        <p>Compréhension approfondie de votre environnement et de vos besoins spécifiques.</p>
-                        <ul class="feature-list">
-                            <li>Questionnaire technique adapté aux métiers</li>
-                            <li>Analyse des fichiers et processus existants</li>
-                            <li>Entretiens avec les managers et équipes</li>
-                            <li>Identification des processus clés</li>
-                            <li>Évaluation des besoins métier</li>
+                        <h4 class="card-title">🔍 Diagnostic Initial</h4>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Questionnaire en ligne adapté aux métiers</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Analyse des fichiers Excel existants</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Entretiens avec les managers</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Phase 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <div class="phase-icon">
-                            <i class="fas fa-flask fa-2x"></i>
+            <!-- Étape 2 -->
+            <div class="col-md-4">
+                <div class="card methodology-card">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-container">
+                            <i class="fas fa-chart-line text-success fa-2x"></i>
                         </div>
-                        <h4>Phase 2 : Évaluation Technique</h4>
-                    </div>
-                    <div class="phase-body">
-                        <p>Mesure objective des compétences réelles sur des cas concrets de votre entreprise.</p>
-                        <ul class="feature-list">
-                            <li>Tests pratiques sur cas réels d'entreprise</li>
-                            <li>Évaluation de 20 compétences clés Excel/Power BI</li>
-                            <li>Benchmark avec les standards du marché</li>
-                            <li>Analyse des bonnes pratiques</li>
-                            <li>Identification des axes de progression</li>
+                        <h4 class="card-title">📈 Évaluation Technique</h4>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Tests pratiques sur cas réels d'entreprise</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Évaluation des compétences sur 20 compétences clés</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Benchmark avec les standards du marché</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Phase 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <div class="phase-icon">
-                            <i class="fas fa-chart-line fa-2x"></i>
+            <!-- Étape 3 -->
+            <div class="col-md-4">
+                <div class="card methodology-card">
+                    <div class="card-body p-4 text-center">
+                        <div class="icon-container">
+                            <i class="fas fa-file-alt text-success fa-2x"></i>
                         </div>
-                        <h4>Phase 3 : Rapport Stratégique</h4>
-                    </div>
-                    <div class="phase-body">
-                        <p>Recommandations actionnables pour optimiser votre investissement formation.</p>
-                        <ul class="feature-list">
-                            <li>Cartographie des compétences par service</li>
-                            <li>Plan de développement priorisé</li>
-                            <li>Estimation du ROI de formation</li>
-                            <li>Recommandations personnalisées</li>
-                            <li>Feuille de route de mise en œuvre</li>
+                        <h4 class="card-title">🎯 Rapport d'Expertise</h4>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Cartographie des compétences par service</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Plan de développement priorisé</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Estimation du ROI de formation</li>
                         </ul>
                     </div>
                 </div>
@@ -162,6 +128,8 @@
         </div>
     </div>
 </section>
+
+
 
 <!-- Section Bénéfices -->
 <section id="benefices" class="py-5">
@@ -244,10 +212,130 @@
     </div>
 </section>
 
+
+<!-- Cas d'Usage Section -->
+<section id="cas-usage" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Cas d'Usage Concrets</h2>
+        <p class="lead text-center mb-5">Découvrez comment nos services ont résolu des problématiques réelles</p>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5>Tableau de bord commercial automatisé</h5>
+                    <p class="mb-2">Pour une PME du secteur retail</p>
+                    <p class="text-muted">Création d'un modèle Excel avec connexion automatique au CRM, actualisation quotidienne des données et visualisations des performances commerciales.</p>
+                    <div class="mt-3">
+                        <span class="badge bg-success me-2">+40%</span>
+                        <span class="text-muted">de temps gagné en reporting</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h5>Automatisation du processus de paie</h5>
+                    <p class="mb-2">Pour une association à but non lucratif</p>
+                    <p class="text-muted">Développement d'une solution VBA pour automatiser le calcul des salaires, les déclarations sociales et la génération des bulletins de paie.</p>
+                    <div class="mt-3">
+                        <span class="badge bg-success me-2">-8h/semaine</span>
+                        <span class="text-muted">de tâches manuelles</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h5>Coaching pour directeur financier</h5>
+                    <p class="mb-2">Pour un groupe industriel</p>
+                    <p class="text-muted">Accompagnement personnalisé sur 3 mois pour maîtriser les tableaux croisés dynamiques avancés et l'analyse de scénarios financiers complexes.</p>
+                    <div class="mt-3">
+                        <span class="badge bg-success me-2">+60%</span>
+                        <span class="text-muted">d'efficacité dans les analyses</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h5>Migration vers Power BI</h5>
+                    <p class="mb-2">Pour une agence de communication</p>
+                    <p class="text-muted">Atelier de migration avec transformation des rapports Excel existants en tableaux de bord Power BI interactifs avec actualisation automatique.</p>
+                    <div class="mt-3">
+                        <span class="badge bg-success me-2">×3</span>
+                        <span class="text-muted">plus rapide pour l'analyse des campagnes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Processus Section -->
+<section id="processus" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Notre Processus de Collaboration</h2>
+        <p class="lead text-center mb-5">Une méthodologie éprouvée pour garantir le succès de votre projet</p>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h5>Analyse des besoins</h5>
+                        <p class="mb-0">Nous organisons une réunion de découverte pour comprendre vos processus actuels, identifier les points de friction et définir vos objectifs précis.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h5>Proposition sur mesure</h5>
+                        <p class="mb-0">Nous élaborons une proposition détaillée avec planning, livrables et investissement, adaptée spécifiquement à votre contexte.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h5>Développement et tests</h5>
+                        <p class="mb-0">Nous concevons la solution en collaboration étroite avec vous, avec des points d'étape réguliers et des tests de validation.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h5>Formation et déploiement</h5>
+                        <p class="mb-0">Nous formons vos équipes à l'utilisation de la solution et accompagnons le déploiement pour assurer une adoption réussie.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div>
+                        <h5>Support et optimisation</h5>
+                        <p class="mb-0">Nous assurons un support post-déploiement et proposons des optimisations pour faire évoluer la solution avec vos besoins.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <!-- Section Clients -->
 <section class="py-5 bg-light">
     <div class="container">
-        <h3 class="text-center mb-5">Ils nous font confiance</h3>
+        <h3 class="text-center mb-5 section-title">Ils nous font confiance</h3>
         <div class="client-logos">
             <div class="client-logo">ONG</div>
             <div class="client-logo">PME</div>
