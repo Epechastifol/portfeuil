@@ -4,12 +4,49 @@
 {% block content %}
 <div class="container py-5">
   <h1>Contenu gratuit</h1>
-  <p>Bienvenue sur la page de contenu gratuit. Ajoutez ici vos articles, guides, templates et vidéos à télécharger.</p>
-  <p>Exemples de ressources :</p>
-  <ul>
-    <li><a href="#">Guide PDF - Débuter avec Excel</a></li>
-    <li><a href="#">Template Power BI - Dashboard simple</a></li>
-    <li><a href="#">Tutoriel vidéo - Les bases de Power Query</a></li>
-  </ul>
+  <p class="lead">Articles, tutoriels, modèles et webinaires pour monter en compétence.</p>
+
+  <section class="mb-4">
+    <h3>Articles & Tutoriels</h3>
+    <ul>
+      <li><a href="#">10 astuces Excel pour gagner du temps</a></li>
+      <li><a href="#">Comment structurer vos données pour Power BI</a></li>
+      <li><a href="#">Power Query : nettoyer vos données en 5 étapes</a></li>
+    </ul>
+  </section>
+
+  <section class="mb-4">
+    <h3>Modèles gratuits</h3>
+    <ul>
+      <li><a href="#">Template budget mensuel (Excel)</a></li>
+      <li><a href="#">Dashboard KPI (Power BI) - version starter</a></li>
+    </ul>
+  </section>
+
+  <section class="mb-4">
+    <h3>Webinaires & Replay</h3>
+    <p>Accédez aux replays de nos sessions :</p>
+    <ul>
+      <li><a href="#">Replay : Introduction à Power Query</a></li>
+      <li><a href="#">Replay : Optimiser vos tableaux Excel</a></li>
+    </ul>
+  </section>
+
+  <section class="mb-4">
+    <h3>Newsletter</h3>
+    <p>Inscrivez-vous pour recevoir des ressources et astuces chaque mois.</p>
+    <form action="#" method="post" class="row g-2">
+      <div class="col-auto">
+        <input type="email" class="form-control" name="email" placeholder="Votre email">
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-primary" type="submit">S'inscrire</button>
+      </div>
+    </form>
+  </section>
+
+  <div class="text-center mt-4">
+    <a class="btn btn-outline-success" href="{% url 'contenu_gratuit' %}">Voir tous les contenus</a>
+  </div>
 </div>
 {% endblock %}

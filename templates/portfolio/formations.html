@@ -3,9 +3,111 @@
 
 {% block content %}
 <div class="container py-5">
-  <h1>Formations</h1>
-  <p>Nos formations couvrent : Excel (tous niveaux), Power BI, VBA, Power Query.</p>
-  <p>Contactez-nous pour connaître les programmes, tarifs et modalités (présentiel / distanciel).</p>
-  <a class="btn btn-primary" href="{% url 'contacts_devis' %}">Demander une formation / Devis</a>
+  <header class="text-center mb-4">
+    <h1>Formations</h1>
+    <p class="lead">Parcours clairs et progressifs — du Fondamental à l'Expert</p>
+  </header>
+
+  <section id="excel" class="mb-5">
+    <h2>Formations Excel</h2>
+    <p>Trois niveaux pour s'adapter à vos besoins métiers :</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Niveau 1 — Fondamentaux</h5>
+            <ul>
+              <li>Navigation et formules de base</li>
+              <li>Mise en forme et filtres</li>
+              <li>Introduction aux tableaux</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Niveau 2 — Intermédiaire</h5>
+            <ul>
+              <li>Fonctions avancées (recherche, conditionnelles)</li>
+              <li>Tableaux croisés dynamiques</li>
+              <li>Consolidation et validation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Niveau 3 — Expert</h5>
+            <ul>
+              <li>Automatisation avec VBA</li>
+              <li>Power Query & modèles avancés</li>
+              <li>Optimisation et bonnes pratiques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="powerbi" class="mb-5">
+    <h2>Formations Power BI</h2>
+    <p>Trois niveaux progressifs pour maîtriser la plateforme :</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Initiation</h5>
+            <ul>
+              <li>Connexion aux données</li>
+              <li>Visualisations de base</li>
+              <li>Création de rapports simples</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Intermédiaire</h5>
+            <ul>
+              <li>Modélisation de données</li>
+              <li>Mesures DAX de base</li>
+              <li>Optimisation des performances</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Expert</h5>
+            <ul>
+              <li>DAX avancé et optimisations</li>
+              <li>Architecture de dataset</li>
+              <li>Intégration et déploiement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials-formation" class="mb-5">
+    <h3>Témoignages — Formations</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <blockquote class="blockquote p-3 bg-white rounded">"La formation Excel m'a permis d'automatiser 80% des tâches récurrentes."<footer class="blockquote-footer">Responsable Finance</footer></blockquote>
+      </div>
+      <div class="col-md-6">
+        <blockquote class="blockquote p-3 bg-white rounded">"Le parcours Power BI m'a permis de déployer un tableau de bord opérationnel en 2 semaines."<footer class="blockquote-footer">Chargé d'études</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center">
+    <a class="btn btn-primary btn-lg" href="{% url 'contacts_devis' %}">Demander le programme détaillé</a>
+  </div>
 </div>
 {% endblock %}

@@ -3,19 +3,51 @@
 
 {% block content %}
 <div class="container py-5">
-  <h1>Consultances</h1>
-  <p>Nos offres de consultances sont organisées autour de deux axes :</p>
+  <header class="text-center mb-4">
+    <h1>Consultances</h1>
+    <p class="lead">Audit, évaluation et accompagnement sur-mesure pour transformer vos données en décisions.</p>
+  </header>
 
-  <section id="audit-evaluation" class="my-4">
+  <section id="audit-evaluation" class="mb-5">
     <h2>Audit & Evaluation</h2>
-    <p>Nous proposons des audits de compétences et évaluations pour mieux cerner vos besoins.</p>
-    <a class="btn btn-outline-primary" href="{% url 'evaluation' %}">En savoir plus / Audit & Evaluation</a>
+    <p class="mb-3">Méthodologie en 3 étapes :</p>
+    <ol>
+      <li><strong>Diagnostic</strong> — Analyse des outils, processus et compétences existants.</li>
+      <li><strong>Recommandations</strong> — Plan d'actions priorisé avec gains attendus.</li>
+      <li><strong>Accompagnement</strong> — Mise en oeuvre, formation et transfert de compétences.</li>
+    </ol>
+
+    <h4 class="mt-4">Bénéfices & ROI</h4>
+    <ul>
+      <li>Réduction du temps de production des rapports</li>
+      <li>Amélioration de la qualité des données</li>
+      <li>Décisions plus rapides et documentées</li>
+    </ul>
+
+    <h4 class="mt-4">Cas d'usage concrets</h4>
+    <ul>
+      <li>Optimisation des reportings financiers</li>
+      <li>Mise en place d'une chaîne de collecte terrain (Kobo → Power BI)</li>
+      <li>Automatisation des exports et consolidations mensuelles</li>
+    </ul>
+
+    <h4 class="mt-4">Processus de collaboration</h4>
+    <p>Kick-off → Atelier diagnostic → Livrable & plan d'actions → Support à la mise en œuvre.</p>
   </section>
 
-  <section id="services-compl" class="my-4">
-    <h2>Services complémentaires</h2>
-    <p>Services additionnels, accompagnement, audits approfondis et prestations sur mesure.</p>
-    <a class="btn btn-outline-primary" href="{% url 'contacts_devis' %}">Demander un devis</a>
+  <section id="services-compl" class="mb-5">
+    <h2>Services Complémentaires</h2>
+    <ul>
+      <li>Création de modèles Excel sur-mesure</li>
+      <li>Automatisation VBA & Power Query</li>
+      <li>Coaching individuel "Excel Coach"</li>
+      <li>Ateliers migration Excel → Power BI</li>
+    </ul>
+    <a class="btn btn-outline-primary" href="{% url 'contacts_devis' %}">Demander un devis personnalisé</a>
   </section>
+
+  <div class="text-center">
+    <a class="btn btn-primary btn-lg" href="{% url 'contacts_devis' %}">Obtenir un devis personnalisé</a>
+  </div>
 </div>
 {% endblock %}
