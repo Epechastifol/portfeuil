@@ -51,6 +51,22 @@ def Contact_View(request):
     return render(request, 'portfolio/contact_devis.html')
 
 
+def ContenuGratuit(request):
+    """Page listing free content/resources."""
+    return render(request, 'portfolio/contenu_gratuit.html')
+
+
+def Consultances(request):
+    """Landing page for consultances with sections linking to Audit & Evaluation and Services complémentaires."""
+    # we can include links/anchors to existing views 'audit' and 'services_supplementaire'
+    return render(request, 'portfolio/consultances.html')
+
+
+def Formations(request):
+    """Page describing available formations."""
+    return render(request, 'portfolio/formations.html')
+
+
 class MessageDetailView(DetailView):
 	model = ContactMessage
 	template_name = 'admin/actions/detailsMessage.html'

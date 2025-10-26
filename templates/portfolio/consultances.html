@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Consultances{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1>Consultances</h1>
+  <p>Nos offres de consultances sont organisées autour de deux axes :</p>
+
+  <section id="audit-evaluation" class="my-4">
+    <h2>Audit & Evaluation</h2>
+    <p>Nous proposons des audits de compétences et évaluations pour mieux cerner vos besoins.</p>
+    <a class="btn btn-outline-primary" href="{% url 'evaluation' %}">En savoir plus / Audit & Evaluation</a>
+  </section>
+
+  <section id="services-compl" class="my-4">
+    <h2>Services complémentaires</h2>
+    <p>Services additionnels, accompagnement, audits approfondis et prestations sur mesure.</p>
+    <a class="btn btn-outline-primary" href="{% url 'contacts_devis' %}">Demander un devis</a>
+  </section>
+</div>
+{% endblock %}

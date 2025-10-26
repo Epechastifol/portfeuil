@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Formations{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1>Formations</h1>
+  <p>Nos formations couvrent : Excel (tous niveaux), Power BI, VBA, Power Query.</p>
+  <p>Contactez-nous pour connaître les programmes, tarifs et modalités (présentiel / distanciel).</p>
+  <a class="btn btn-primary" href="{% url 'contacts_devis' %}">Demander une formation / Devis</a>
+</div>
+{% endblock %}

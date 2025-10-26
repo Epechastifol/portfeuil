@@ -28,16 +28,24 @@
             <div class="collapse navbar-collapse py-2" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Acceuil</a>
+                        <a class="nav-link" href="{% url 'home' %}">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'evaluation' %}">Evaluation</a>
+                        <a class="nav-link" href="{% url 'contenu_gratuit' %}">Contenu gratuit</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'services' %}">Mes Services</a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mes services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="{% url 'consultances' %}">Consultances</a></li>
+                            <li><a class="dropdown-item" href="{% url 'formations' %}">Formations</a></li>
+                        </ul>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contacts_devis' %}">Contacts & Devis</a>
+                        <a class="nav-link" href="{% url 'contacts_devis' %}">Contact</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-3">
