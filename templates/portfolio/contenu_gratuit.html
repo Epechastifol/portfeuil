@@ -1,52 +1,100 @@
 {% extends 'base.html' %}
-{% block title %}Contenu gratuit{% endblock %}
+{% block title %} Contenu gratuit {% endblock %}
 
 {% block content %}
+<canvas></canvas>
 <div class="container py-5">
-  <h1>Contenu gratuit</h1>
-  <p class="lead">Articles, tutoriels, modèles et webinaires pour monter en compétence.</p>
+  <div class="row">
+    <div class="col-lg-8">
+      <h1 class="display-4 fw-bold mb-3">Contenu gratuit</h1>
+      <p class="lead mb-4">Articles, tutoriels, modèles et webinaires pour monter en compétence.</p>
 
-  <section class="mb-4">
-    <h3>Articles & Tutoriels</h3>
-    <ul>
-      <li><a href="#">10 astuces Excel pour gagner du temps</a></li>
-      <li><a href="#">Comment structurer vos données pour Power BI</a></li>
-      <li><a href="#">Power Query : nettoyer vos données en 5 étapes</a></li>
-    </ul>
-  </section>
-
-  <section class="mb-4">
-    <h3>Modèles gratuits</h3>
-    <ul>
-      <li><a href="#">Template budget mensuel (Excel)</a></li>
-      <li><a href="#">Dashboard KPI (Power BI) - version starter</a></li>
-    </ul>
-  </section>
-
-  <section class="mb-4">
-    <h3>Webinaires & Replay</h3>
-    <p>Accédez aux replays de nos sessions :</p>
-    <ul>
-      <li><a href="#">Replay : Introduction à Power Query</a></li>
-      <li><a href="#">Replay : Optimiser vos tableaux Excel</a></li>
-    </ul>
-  </section>
-
-  <section class="mb-4">
-    <h3>Newsletter</h3>
-    <p>Inscrivez-vous pour recevoir des ressources et astuces chaque mois.</p>
-    <form action="#" method="post" class="row g-2">
-      <div class="col-auto">
-        <input type="email" class="form-control" name="email" placeholder="Votre email">
+      <div class="mb-4">
+        <h3 class="section-title">Articles & Tutoriels</h3>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">
+            <strong>10 astuces Excel pour gagner du temps</strong>
+            <div class="small text-muted">Techniques rapides et réutilisables</div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <strong>Comment structurer vos données pour Power BI</strong>
+            <div class="small text-muted">Bonnes pratiques de modélisation</div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <strong>Power Query : nettoyer vos données en 5 étapes</strong>
+            <div class="small text-muted">Tutoriel pas à pas</div>
+          </a>
+        </div>
       </div>
-      <div class="col-auto">
-        <button class="btn btn-primary" type="submit">S'inscrire</button>
-      </div>
-    </form>
-  </section>
 
-  <div class="text-center mt-4">
-    <a class="btn btn-outline-success" href="{% url 'contenu_gratuit' %}">Voir tous les contenus</a>
+      <div class="mb-4">
+        <h3 class="section-title">Modèles gratuits</h3>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Template budget mensuel (Excel)</h5>
+                <p class="card-text small text-muted">Téléchargez et adaptez pour votre structure.</p>
+                <a href="#" class="btn btn-outline-success btn-sm">Télécharger</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Dashboard KPI (Power BI) - starter</h5>
+                <p class="card-text small text-muted">Pack d'exemples et guide d'installation.</p>
+                <a href="#" class="btn btn-outline-success btn-sm">Télécharger</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Webinaires & Replay</h3>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#">Replay : Introduction à Power Query</a></li>
+          <li><a href="#">Replay : Optimiser vos tableaux Excel</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">S'inscrire à la newsletter</h5>
+          <p class="small text-muted">Recevez les meilleurs articles et modèles chaque mois.</p>
+          <form action="#" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <input type="email" class="form-control" name="email" placeholder="Votre email" required>
+            </div>
+            <button class="btn btn-accent w-100" type="submit">S'inscrire</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Contact rapide</h5>
+          <p class="mb-1"><i class="fas fa-envelope text-accent me-2"></i> ignagali.zk@gmail.com</p>
+          <p class="mb-1"><i class="fas fa-phone text-accent me-2"></i> +235 60 88 71 18</p>
+          <a href="{% url 'contacts_devis' %}" class="btn btn-outline-success btn-sm mt-2">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Ressources populaires</h5>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="#">Guide : Tableaux croisés dynamiques</a></li>
+            <li><a href="#">Template : Planning de formation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
