@@ -3,12 +3,14 @@
 
 {% block content %}
 <div class="container py-5">
-  <header class="text-center mb-4">
-    <h1>Consultances</h1>
-    <p class="lead">Audit, évaluation et accompagnement sur-mesure pour transformer vos données en décisions.</p>
-  </header>
+  <div class="row">
+    <div class="col-lg-8">
+      <header class="text-start mb-4">
+        <h1 class="display-5">Consultances</h1>
+        <p class="lead">Audit, évaluation et accompagnement sur-mesure pour transformer vos données en décisions.</p>
+      </header>
 
-  <section id="audit-evaluation" class="mb-5">
+      <section id="audit-evaluation" class="mb-5">
     <h2>Audit & Evaluation</h2>
     <p class="mb-3">Méthodologie en 3 étapes :</p>
     <ol>
@@ -33,9 +35,9 @@
 
     <h4 class="mt-4">Processus de collaboration</h4>
     <p>Kick-off → Atelier diagnostic → Livrable & plan d'actions → Support à la mise en œuvre.</p>
-  </section>
+      </section>
 
-  <section id="services-compl" class="mb-5">
+      <section id="services-compl" class="mb-5">
     <h2>Services Complémentaires</h2>
     <ul>
       <li>Création de modèles Excel sur-mesure</li>
@@ -43,11 +45,49 @@
       <li>Coaching individuel "Excel Coach"</li>
       <li>Ateliers migration Excel → Power BI</li>
     </ul>
-    <a class="btn btn-outline-primary" href="{% url 'contacts_devis' %}">Demander un devis personnalisé</a>
-  </section>
+        <a class="btn btn-outline-success" href="{% url 'contacts_devis' %}">Demander un devis personnalisé</a>
+      </section>
 
-  <div class="text-center">
-    <a class="btn btn-primary btn-lg" href="{% url 'contacts_devis' %}">Obtenir un devis personnalisé</a>
+      <div class="text-center mt-4">
+        <a class="btn btn-accent btn-lg" href="{% url 'contacts_devis' %}">Obtenir un devis personnalisé</a>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">S'inscrire à la newsletter</h5>
+          <p class="small text-muted">Recevez des astuces et templates gratuits.</p>
+          <form action="#" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <input type="email" class="form-control" name="email" placeholder="Votre email" required>
+            </div>
+            <button class="btn btn-accent w-100" type="submit">S'inscrire</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Contact rapide</h5>
+          <p class="mb-1"><i class="fas fa-envelope text-accent me-2"></i> ignagali.zk@gmail.com</p>
+          <p class="mb-1"><i class="fas fa-phone text-accent me-2"></i> +235 60 88 71 18</p>
+          <a href="{% url 'contacts_devis' %}" class="btn btn-outline-success btn-sm mt-2">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Services complémentaires</h5>
+          <ul class="small mb-0">
+            <li>Création de modèles Excel sur-mesure</li>
+            <li>Automatisation VBA & Power Query</li>
+            <li>Coaching individuel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}

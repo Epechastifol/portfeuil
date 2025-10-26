@@ -3,12 +3,14 @@
 
 {% block content %}
 <div class="container py-5">
-  <header class="text-center mb-4">
-    <h1>Formations</h1>
-    <p class="lead">Parcours clairs et progressifs — du Fondamental à l'Expert</p>
-  </header>
+  <div class="row">
+    <div class="col-lg-8">
+      <header class="text-start mb-4">
+        <h1 class="display-5">Formations</h1>
+        <p class="lead">Parcours clairs et progressifs — du Fondamental à l'Expert</p>
+      </header>
 
-  <section id="excel" class="mb-5">
+      <section id="excel" class="mb-5">
     <h2>Formations Excel</h2>
     <p>Trois niveaux pour s'adapter à vos besoins métiers :</p>
     <div class="row">
@@ -106,8 +108,42 @@
     </div>
   </section>
 
-  <div class="text-center">
-    <a class="btn btn-primary btn-lg" href="{% url 'contacts_devis' %}">Demander le programme détaillé</a>
+      <div class="text-center">
+        <a class="btn btn-accent btn-lg" href="{% url 'contacts_devis' %}">Demander le programme détaillé</a>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Programmes et tarifs</h5>
+          <p class="small text-muted">Demandez le programme détaillé pour chaque niveau.</p>
+          <a href="{% url 'contacts_devis' %}" class="btn btn-outline-success btn-sm w-100">Demander le programme</a>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">S'inscrire à la newsletter</h5>
+          <form action="#" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <input type="email" class="form-control" name="email" placeholder="Votre email" required>
+            </div>
+            <button class="btn btn-accent w-100" type="submit">S'inscrire</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Contact rapide</h5>
+          <p class="mb-1"><i class="fas fa-envelope text-accent me-2"></i> ignagali.zk@gmail.com</p>
+          <p class="mb-1"><i class="fas fa-phone text-accent me-2"></i> +235 60 88 71 18</p>
+          <a href="{% url 'contacts_devis' %}" class="btn btn-outline-success btn-sm mt-2">Demander une formation</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
