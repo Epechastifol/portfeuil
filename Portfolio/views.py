@@ -85,3 +85,4 @@ def ContactsDevis(request):
 
 def Cas_Client(request):
     return render(request, 'portfolio/cas_client.html')
+

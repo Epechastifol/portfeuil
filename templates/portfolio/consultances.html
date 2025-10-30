@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Consultances{% endblock %}
+{% block title %} Consultances {% endblock %}
 
 {% block content %}
 <canvas></canvas>
@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-lg-8">
       <header class="text-start mb-4">
-        <h1 class="display-5">Consultances</h1>
+        <h1 class="display-5 bg-success bg-opacity-10 p-4 text-light rounded text-center">Consultances</h1>
         <p class="lead">Audit, évaluation et accompagnement sur-mesure pour transformer vos données en décisions.</p>
       </header>
 
@@ -15,9 +15,9 @@
     <h2>Audit & Evaluation</h2>
     <p class="mb-3">Méthodologie en 3 étapes :</p>
     <ol>
-      <li><strong>Diagnostic</strong> — Analyse des outils, processus et compétences existants.</li>
-      <li><strong>Recommandations</strong> — Plan d'actions priorisé avec gains attendus.</li>
-      <li><strong>Accompagnement</strong> — Mise en oeuvre, formation et transfert de compétences.</li>
+      <li><strong class="text-success">Diagnostic</strong> — Analyse des outils, processus et compétences existants.</li>
+      <li><strong class="text-success">Recommandations</strong> — Plan d'actions priorisé avec gains attendus.</li>
+      <li><strong class="text-success">Accompagnement</strong> — Mise en oeuvre, formation et transfert de compétences.</li>
     </ol>
 
     <h4 class="mt-4">Bénéfices & ROI</h4>
@@ -39,20 +39,19 @@
       </section>
 
       <section id="services-compl" class="mb-5">
-    <h2>Services Complémentaires</h2>
-    <ul>
-      <li>Création de modèles Excel sur-mesure</li>
-      <li>Automatisation VBA & Power Query</li>
-      <li>Coaching individuel "Excel Coach"</li>
-      <li>Ateliers migration Excel → Power BI</li>
-    </ul>
+        <h2>Services Complémentaires</h2>
+        <ul>
+          <li>Création de modèles Excel sur-mesure</li>
+          <li>Automatisation VBA & Power Query</li>
+          <li>Coaching individuel "Excel Coach"</li>
+          <li>Ateliers migration Excel → Power BI</li>
+        </ul>
         <a class="btn btn-outline-success" href="{% url 'contacts_devis' %}">Demander un devis personnalisé</a>
       </section>
 
       <div class="text-center mt-4">
         <a class="btn btn-accent btn-lg" href="{% url 'contacts_devis' %}">Obtenir un devis personnalisé</a>
       </div>
-    </div>
 
     <div class="col-lg-4">
       <div class="card mb-4">
